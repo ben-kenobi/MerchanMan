@@ -1,0 +1,6 @@
+framework module IOS_OC_BASIC {
+  umbrella header "IOS_OC_BASIC-umbrella.h"
+
+  export *
+  module * { export * }
+}

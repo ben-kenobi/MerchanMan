@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>Home</string>
+		<key>clz</key>
+		<string>YFHomeVC02</string>
+	</dict>
+	<dict>
+		<key>clz</key>
+		<string>YFHotVC</string>
+		<key>title</key>
+		<string>Hot</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Circle</string>
+		<key>clz</key>
+		<string>YFCircleVC</string>
+		<key>pname</key>
+		<string>disc</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Tool</string>
+		<key>clz</key>
+		<string>YFToolVC</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>XMPP</string>
+		<key>clz</key>
+		<string>YFXmppVC</string>
+		<key>pname</key>
+		<string>setting</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Shake</string>
+		<key>clz</key>
+		<string>YFShakeVC</string>
+		<key>pname</key>
+		<string>setting</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Live</string>
+		<key>clz</key>
+		<string>YFLiveVC</string>
+		<key>pname</key>
+		<string>setting</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>US</string>
+		<key>clz</key>
+		<string>YFUsVC</string>
+		<key>pname</key>
+		<string>setting</string>
+	</dict>
+</array>
+</plist>

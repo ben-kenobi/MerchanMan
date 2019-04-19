@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>iconname</key>
+		<string>setting_icon</string>
+		<key>title</key>
+		<string>Settings</string>
+		<key>vcName</key>
+		<string>BCUserSettingVC</string>
+		<key>hasNews</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>iconname</key>
+		<string>about_icon</string>
+		<key>title</key>
+		<string>About</string>
+		<key>vcName</key>
+		<string>BCAboutVC</string>
+		<key>hasNews</key>
+		<false/>
+	</dict>
+</array>
+</plist>
