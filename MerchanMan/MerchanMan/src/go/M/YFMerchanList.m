@@ -65,6 +65,20 @@
     static YFMerchanList *instance;
     dispatch_once(&onceToken, ^{
         instance = [YFMerchanList unArchive];
+#if DEBUG
+        YFMerchan *mod = [[YFMerchan alloc]init];
+        mod.name = @"121312313f";
+        mod.inPrice = @"120";
+        mod.outPrice = @"240";
+        mod.remark = @"remat\nwlkekrlwekrlwrentma";
+        mod.iconPaths = @[iRes(@"personal_bg@2x.png")];
+        [instance.merchans addObject:mod];
+        [instance.merchans addObject:mod];[instance.merchans addObject:mod];
+        [instance.merchans addObject:mod];
+        [instance.merchans addObject:mod];
+        [instance.merchans addObject:mod];
+        
+#endif
     });
     return instance;
 }

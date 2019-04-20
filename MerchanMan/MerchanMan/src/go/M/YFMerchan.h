@@ -19,6 +19,10 @@
 @property (nonatomic,strong)NSString *outPrice;
 @property (nonatomic,strong)NSDate *addTime;
 @property (nonatomic,strong)NSDate *updateTime;
+
+-(NSAttributedString *)detailAttrDesc;
+-(NSURL *)defIconUrl;
+-(UIImage *)defIcon;
 @end
 
 

@@ -26,10 +26,14 @@ PODS:
     - RealReachability/Ping (= 1.3.0)
   - RealReachability/Connection (1.3.0)
   - RealReachability/Ping (1.3.0)
+  - SDWebImage (5.0.1):
+    - SDWebImage/Core (= 5.0.1)
+  - SDWebImage/Core (5.0.1)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - IOS_OC_BASIC
+  - SDWebImage
   - SVProgressHUD
 
 SPEC REPOS:
@@ -39,6 +43,7 @@ SPEC REPOS:
     - Masonry
     - MJRefresh
     - RealReachability
+    - SDWebImage
     - SVProgressHUD
 
 SPEC CHECKSUMS:
@@ -47,8 +52,9 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: 7798e16e53a5ef7f332dd05b27664db4e29530fd
   RealReachability: eae9c58d2db52fadd8e1cba4b5d4c028454fbc47
+  SDWebImage: 27dd2c9ea07a2252f94557c9fbb6105ee94b74c9
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: bf8d3e1889d724c2cfa2ce670a5f0b42d98dfdf3
+PODFILE CHECKSUM: 8002642f7a3a3732f44b6521028e7cb7a2dbf056
 
 COCOAPODS: 1.5.3
