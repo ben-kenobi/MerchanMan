@@ -43,10 +43,10 @@
 }
 
 -(void)updateLayout{
-    [self.contentView mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.trailing.top.bottom.equalTo(@0);
-        make.leading.equalTo(@12);
-    }];
+//    [self.contentView mas_remakeConstraints:^(MASConstraintMaker *make) {
+//        make.trailing.top.bottom.equalTo(@0);
+//        make.leading.equalTo(@12);
+//    }];
     [self.redot mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.contentView.mas_trailing).offset(dp2po(-36));
         make.centerY.equalTo(@0);

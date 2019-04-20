@@ -20,12 +20,7 @@
 		A57D4924226A1559004392C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A57D48EC226A1559004392C5 /* main.m */; };
 		A57D4925226A1559004392C5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A57D48ED226A1559004392C5 /* AppDelegate.m */; };
 		A57D4927226A1559004392C5 /* mystring.strings in Resources */ = {isa = PBXBuildFile; fileRef = A57D48EF226A1559004392C5 /* mystring.strings */; };
-		A57D4928226A1559004392C5 /* YFMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = A57D48F4226A1559004392C5 /* YFMatch.m */; };
-		A57D4929226A1559004392C5 /* YFChess.m in Sources */ = {isa = PBXBuildFile; fileRef = A57D48F7226A1559004392C5 /* YFChess.m */; };
-		A57D492A226A1559004392C5 /* YFChessBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = A57D48F8226A1559004392C5 /* YFChessBoard.m */; };
-		A57D492B226A1559004392C5 /* YFGoMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A57D48FB226A1559004392C5 /* YFGoMainVC.m */; };
-		A57D492C226A1559004392C5 /* YFChessBoradView.m in Sources */ = {isa = PBXBuildFile; fileRef = A57D48FF226A1559004392C5 /* YFChessBoradView.m */; };
-		A57D492D226A1559004392C5 /* YFChessBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = A57D4900226A1559004392C5 /* YFChessBtn.m */; };
+		A57D492B226A1559004392C5 /* YFMerchanListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A57D48FB226A1559004392C5 /* YFMerchanListVC.m */; };
 		A57D492E226A1559004392C5 /* MenuList.plist in Resources */ = {isa = PBXBuildFile; fileRef = A57D4903226A1559004392C5 /* MenuList.plist */; };
 		A57D492F226A1559004392C5 /* BCMenuMod.m in Sources */ = {isa = PBXBuildFile; fileRef = A57D4905226A1559004392C5 /* BCMenuMod.m */; };
 		A57D4930226A1559004392C5 /* BCMenuList.m in Sources */ = {isa = PBXBuildFile; fileRef = A57D4906226A1559004392C5 /* BCMenuList.m */; };
@@ -37,6 +32,8 @@
 		A57D4936226A1559004392C5 /* BCUserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A57D4917226A1559004392C5 /* BCUserInfoCell.m */; };
 		A57D4937226A1559004392C5 /* BCCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = A57D4918226A1559004392C5 /* BCCoverView.m */; };
 		A57D4938226A1559004392C5 /* BCMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A57D4919226A1559004392C5 /* BCMenuCell.m */; };
+		A57D493B226B3F97004392C5 /* YFMerchan.m in Sources */ = {isa = PBXBuildFile; fileRef = A57D493A226B3F97004392C5 /* YFMerchan.m */; };
+		A57D493E226B3FA4004392C5 /* YFMerchanList.m in Sources */ = {isa = PBXBuildFile; fileRef = A57D493D226B3FA4004392C5 /* YFMerchanList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,18 +58,8 @@
 		A57D48ED226A1559004392C5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A57D48EE226A1559004392C5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A57D48EF226A1559004392C5 /* mystring.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = mystring.strings; sourceTree = "<group>"; };
-		A57D48F3226A1559004392C5 /* YFChess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFChess.h; sourceTree = "<group>"; };
-		A57D48F4226A1559004392C5 /* YFMatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFMatch.m; sourceTree = "<group>"; };
-		A57D48F5226A1559004392C5 /* YFChessBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFChessBoard.h; sourceTree = "<group>"; };
-		A57D48F6226A1559004392C5 /* YFMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFMatch.h; sourceTree = "<group>"; };
-		A57D48F7226A1559004392C5 /* YFChess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFChess.m; sourceTree = "<group>"; };
-		A57D48F8226A1559004392C5 /* YFChessBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFChessBoard.m; sourceTree = "<group>"; };
-		A57D48FA226A1559004392C5 /* YFGoMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFGoMainVC.h; sourceTree = "<group>"; };
-		A57D48FB226A1559004392C5 /* YFGoMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFGoMainVC.m; sourceTree = "<group>"; };
-		A57D48FD226A1559004392C5 /* YFChessBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFChessBtn.h; sourceTree = "<group>"; };
-		A57D48FE226A1559004392C5 /* YFChessBoradView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFChessBoradView.h; sourceTree = "<group>"; };
-		A57D48FF226A1559004392C5 /* YFChessBoradView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFChessBoradView.m; sourceTree = "<group>"; };
-		A57D4900226A1559004392C5 /* YFChessBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFChessBtn.m; sourceTree = "<group>"; };
+		A57D48FA226A1559004392C5 /* YFMerchanListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFMerchanListVC.h; sourceTree = "<group>"; };
+		A57D48FB226A1559004392C5 /* YFMerchanListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFMerchanListVC.m; sourceTree = "<group>"; };
 		A57D4903226A1559004392C5 /* MenuList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MenuList.plist; sourceTree = "<group>"; };
 		A57D4905226A1559004392C5 /* BCMenuMod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMenuMod.m; sourceTree = "<group>"; };
 		A57D4906226A1559004392C5 /* BCMenuList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMenuList.m; sourceTree = "<group>"; };
@@ -94,6 +81,10 @@
 		A57D4918226A1559004392C5 /* BCCoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCCoverView.m; sourceTree = "<group>"; };
 		A57D4919226A1559004392C5 /* BCMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMenuCell.m; sourceTree = "<group>"; };
 		A57D491A226A1559004392C5 /* BCUserInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCUserInfoCell.h; sourceTree = "<group>"; };
+		A57D4939226B3F97004392C5 /* YFMerchan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFMerchan.h; sourceTree = "<group>"; };
+		A57D493A226B3F97004392C5 /* YFMerchan.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFMerchan.m; sourceTree = "<group>"; };
+		A57D493C226B3FA4004392C5 /* YFMerchanList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFMerchanList.h; sourceTree = "<group>"; };
+		A57D493D226B3FA4004392C5 /* YFMerchanList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFMerchanList.m; sourceTree = "<group>"; };
 		D23C8B882E46D766E855EE64 /* Pods-MerchanMan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MerchanMan.release.xcconfig"; path = "Pods/Target Support Files/Pods-MerchanMan/Pods-MerchanMan.release.xcconfig"; sourceTree = "<group>"; };
 		EBB4D787FC494727483F1251 /* Pods_MerchanMan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MerchanMan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -210,12 +201,10 @@
 		A57D48F2226A1559004392C5 /* M */ = {
 			isa = PBXGroup;
 			children = (
-				A57D48F3226A1559004392C5 /* YFChess.h */,
-				A57D48F4226A1559004392C5 /* YFMatch.m */,
-				A57D48F5226A1559004392C5 /* YFChessBoard.h */,
-				A57D48F6226A1559004392C5 /* YFMatch.h */,
-				A57D48F7226A1559004392C5 /* YFChess.m */,
-				A57D48F8226A1559004392C5 /* YFChessBoard.m */,
+				A57D4939226B3F97004392C5 /* YFMerchan.h */,
+				A57D493A226B3F97004392C5 /* YFMerchan.m */,
+				A57D493C226B3FA4004392C5 /* YFMerchanList.h */,
+				A57D493D226B3FA4004392C5 /* YFMerchanList.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -223,8 +212,8 @@
 		A57D48F9226A1559004392C5 /* C */ = {
 			isa = PBXGroup;
 			children = (
-				A57D48FA226A1559004392C5 /* YFGoMainVC.h */,
-				A57D48FB226A1559004392C5 /* YFGoMainVC.m */,
+				A57D48FA226A1559004392C5 /* YFMerchanListVC.h */,
+				A57D48FB226A1559004392C5 /* YFMerchanListVC.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -232,10 +221,6 @@
 		A57D48FC226A1559004392C5 /* V */ = {
 			isa = PBXGroup;
 			children = (
-				A57D48FD226A1559004392C5 /* YFChessBtn.h */,
-				A57D48FE226A1559004392C5 /* YFChessBoradView.h */,
-				A57D48FF226A1559004392C5 /* YFChessBoradView.m */,
-				A57D4900226A1559004392C5 /* YFChessBtn.m */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -437,22 +422,19 @@
 				A57D4932226A1559004392C5 /* YFNavVC.m in Sources */,
 				A57D4935226A1559004392C5 /* YFBasicVC.m in Sources */,
 				A57D4931226A1559004392C5 /* BCLeftMenuVC.m in Sources */,
-				A57D4929226A1559004392C5 /* YFChess.m in Sources */,
-				A57D492B226A1559004392C5 /* YFGoMainVC.m in Sources */,
-				A57D492C226A1559004392C5 /* YFChessBoradView.m in Sources */,
+				A57D493E226B3FA4004392C5 /* YFMerchanList.m in Sources */,
+				A57D492B226A1559004392C5 /* YFMerchanListVC.m in Sources */,
+				A57D493B226B3F97004392C5 /* YFMerchan.m in Sources */,
 				A57D4938226A1559004392C5 /* BCMenuCell.m in Sources */,
 				A57D4937226A1559004392C5 /* BCCoverView.m in Sources */,
 				A57D4920226A1559004392C5 /* BCBaseHttpClient.m in Sources */,
 				A57D4925226A1559004392C5 /* AppDelegate.m in Sources */,
-				A57D492A226A1559004392C5 /* YFChessBoard.m in Sources */,
 				A57D4934226A1559004392C5 /* YFMainNav.m in Sources */,
 				A57D4930226A1559004392C5 /* BCMenuList.m in Sources */,
 				A57D491D226A1559004392C5 /* H264VideoParser.m in Sources */,
-				A57D492D226A1559004392C5 /* YFChessBtn.m in Sources */,
 				A57D4933226A1559004392C5 /* YFMainVC2.m in Sources */,
 				A57D492F226A1559004392C5 /* BCMenuMod.m in Sources */,
 				A57D491C226A1559004392C5 /* UIImage+AV.m in Sources */,
-				A57D4928226A1559004392C5 /* YFMatch.m in Sources */,
 				A57D491E226A1559004392C5 /* YFUtil.m in Sources */,
 				A57D4936226A1559004392C5 /* BCUserInfoCell.m in Sources */,
 			);

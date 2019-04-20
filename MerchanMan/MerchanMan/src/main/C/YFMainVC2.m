@@ -2,7 +2,7 @@
 //
 
 #import "YFMainVC2.h"
-#import "YFGoMainVC.h"
+#import "YFMerchanListVC.h"
 #import "YFMainNav.h"
 #import "BCLeftMenuVC.h"
 #import "BCCoverView.h"
@@ -21,7 +21,7 @@
     self.view.backgroundColor=[UIColor whiteColor];
     
     //CurVC
-    YFGoMainVC *govc =[[YFGoMainVC alloc] init];
+    YFMerchanListVC *govc =[[YFMerchanListVC alloc] init];
     self.curVC=[[YFMainNav alloc] initWithRootViewController:govc];
     [self.view addSubview:self.curVC.view];
     [self.curVC.view mas_makeConstraints:^(MASConstraintMaker *make) {

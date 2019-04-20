@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface YFGoMainVC : YFBasicVC
+@interface YFMerchanListVC : YFBasicVC
 
 @end
 
