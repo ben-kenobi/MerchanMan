@@ -36,6 +36,8 @@
 		A57D493E226B3FA4004392C5 /* YFMerchanList.m in Sources */ = {isa = PBXBuildFile; fileRef = A57D493D226B3FA4004392C5 /* YFMerchanList.m */; };
 		A57D4941226B5969004392C5 /* YFMerchantCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A57D4940226B5969004392C5 /* YFMerchantCell.m */; };
 		A57D4943226B7A55004392C5 /* personal_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A57D4942226B7A55004392C5 /* personal_bg@2x.png */; };
+		A57D4949226CA72D004392C5 /* YFMerchanSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A57D4948226CA72D004392C5 /* YFMerchanSearchVC.m */; };
+		A57D494F226CB65A004392C5 /* YFMerchanListTv.m in Sources */ = {isa = PBXBuildFile; fileRef = A57D494E226CB65A004392C5 /* YFMerchanListTv.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +92,10 @@
 		A57D493F226B5969004392C5 /* YFMerchantCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFMerchantCell.h; sourceTree = "<group>"; };
 		A57D4940226B5969004392C5 /* YFMerchantCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFMerchantCell.m; sourceTree = "<group>"; };
 		A57D4942226B7A55004392C5 /* personal_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "personal_bg@2x.png"; path = "MerchanMan/Assets.xcassets/personal_bg.imageset/personal_bg@2x.png"; sourceTree = SOURCE_ROOT; };
+		A57D4947226CA72D004392C5 /* YFMerchanSearchVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFMerchanSearchVC.h; sourceTree = "<group>"; };
+		A57D4948226CA72D004392C5 /* YFMerchanSearchVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFMerchanSearchVC.m; sourceTree = "<group>"; };
+		A57D494D226CB65A004392C5 /* YFMerchanListTv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFMerchanListTv.h; sourceTree = "<group>"; };
+		A57D494E226CB65A004392C5 /* YFMerchanListTv.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFMerchanListTv.m; sourceTree = "<group>"; };
 		D23C8B882E46D766E855EE64 /* Pods-MerchanMan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MerchanMan.release.xcconfig"; path = "Pods/Target Support Files/Pods-MerchanMan/Pods-MerchanMan.release.xcconfig"; sourceTree = "<group>"; };
 		EBB4D787FC494727483F1251 /* Pods_MerchanMan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MerchanMan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -220,6 +226,8 @@
 			children = (
 				A57D48FA226A1559004392C5 /* YFMerchanListVC.h */,
 				A57D48FB226A1559004392C5 /* YFMerchanListVC.m */,
+				A57D4947226CA72D004392C5 /* YFMerchanSearchVC.h */,
+				A57D4948226CA72D004392C5 /* YFMerchanSearchVC.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -229,6 +237,8 @@
 			children = (
 				A57D493F226B5969004392C5 /* YFMerchantCell.h */,
 				A57D4940226B5969004392C5 /* YFMerchantCell.m */,
+				A57D494D226CB65A004392C5 /* YFMerchanListTv.h */,
+				A57D494E226CB65A004392C5 /* YFMerchanListTv.m */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -438,9 +448,11 @@
 				A57D493B226B3F97004392C5 /* YFMerchan.m in Sources */,
 				A57D4938226A1559004392C5 /* BCMenuCell.m in Sources */,
 				A57D4937226A1559004392C5 /* BCCoverView.m in Sources */,
+				A57D4949226CA72D004392C5 /* YFMerchanSearchVC.m in Sources */,
 				A57D4920226A1559004392C5 /* BCBaseHttpClient.m in Sources */,
 				A57D4925226A1559004392C5 /* AppDelegate.m in Sources */,
 				A57D4934226A1559004392C5 /* YFMainNav.m in Sources */,
+				A57D494F226CB65A004392C5 /* YFMerchanListTv.m in Sources */,
 				A57D4930226A1559004392C5 /* BCMenuList.m in Sources */,
 				A57D491D226A1559004392C5 /* H264VideoParser.m in Sources */,
 				A57D4933226A1559004392C5 /* YFMainVC2.m in Sources */,

@@ -22,9 +22,14 @@
 }
 #pragma mark - update
 -(void)updateUI{
-    [self.imageView sd_setImageWithURL:self.mod.defIconUrl placeholderImage:self.mod.defIcon completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-        [image sd_resizedImageWithSize:CGSizeMake(50, 50) scaleMode:(SDImageScaleModeAspectFill)];
-    }];
+    static id<SDImageTransformer> transformer = nil;
+    if(!transformer){
+        transformer = [SDImageResizingTransformer transformerWithSize:CGSizeMake(128, 128) scaleMode:SDImageScaleModeFill];
+    }
+    [self.imageView sd_setImageWithURL:self.mod.defIconUrl placeholderImage:self.mod.defIcon options:0 context:@{SDWebImageContextImageTransformer: transformer}];
+    
+
+    
     self.textLabel.text = self.mod.name;
     self.detailTextLabel.attributedText = self.mod.detailAttrDesc;
     

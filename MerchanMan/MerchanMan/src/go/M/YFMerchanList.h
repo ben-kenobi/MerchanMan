@@ -15,15 +15,12 @@ NS_ASSUME_NONNULL_BEGIN
 @interface YFMerchanList : YFCodecObj
 +(instancetype)shared;
 
--(NSInteger)secCount;
--(NSInteger)rowCountBy:(NSInteger)sec;
--(YFMerchan *)getBy:(NSIndexPath *)idxpath;
 -(void)save;
 -(void)saveMerchant:(YFMerchan *)mod;
 -(void)add:(YFMerchan *)mod;
 -(void)rm:(YFMerchan *)mod;
--(void)rmAt:(NSIndexPath *)idxpath;
--(NSArray *)queryBy:(NSString *)likeName;
+-(NSArray<YFMerchan *> *)queryBy:(NSString *)likeName;
+-(NSArray<YFMerchan *> *)allDatas;
 @end
 
 NS_ASSUME_NONNULL_END

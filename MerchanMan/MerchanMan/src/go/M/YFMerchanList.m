@@ -54,10 +54,14 @@
     [self save];
 }
 -(NSArray *)queryBy:(NSString *)likeName{
-    return nil;
+    NSPredicate *pre = [NSPredicate predicateWithFormat:@"SELF.name CONTAINS %@",likeName];
+    NSArray *ary = [self.merchans filteredArrayUsingPredicate:pre];
+    return ary;
 }
 
-
+-(NSArray<YFMerchan *> *)allDatas{
+    return self.merchans;
+}
 
 #pragma mark - init
 +(instancetype)shared{

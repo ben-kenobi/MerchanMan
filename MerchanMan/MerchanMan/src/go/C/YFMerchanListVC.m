@@ -10,16 +10,18 @@
 #import "YFMerchanListVC.h"
 #import "YFMerchanList.h"
 #import "YFMerchan.h"
-#import "YFMerchantCell.h"
+#import "YFMerchanSearchVC.h"
+#import "YFMerchanListTv.h"
 
-static NSString *celliden = @"celliden";
 
 
-@interface YFMerchanListVC ()<UITableViewDelegate,UITableViewDataSource>
+@interface YFMerchanListVC ()<UISearchControllerDelegate, UISearchResultsUpdating, UISearchBarDelegate>
 
-@property (nonatomic,strong)UITableView *tv;
+@property (nonatomic,strong)YFMerchanListTv *tv;
 
 @property (nonatomic,strong)YFMerchanList * vm;
+
+@property (nonatomic,strong)YFMerchanSearchVC *searchVC;
 
 @end
 
@@ -32,27 +34,25 @@ static NSString *celliden = @"celliden";
     
 }
 
-#pragma mark - UITableviewDelegate
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return [self.vm secCount];
+#pragma mark - UISearchControllerDelegate
+-(void)updateSearchResultsForSearchController:(UISearchController *)searchController{
+    NSString *text = searchController.searchBar.text;
+    NSArray *datas = [self.vm queryBy:text];
+    self.searchVC.datas = datas;
 }
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [self.vm rowCountBy:section];
-}
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    YFMerchantCell *cell = (YFMerchantCell *)[tableView dequeueReusableCellWithIdentifier:celliden];
-    YFMerchan *mod = [self.vm getBy:indexPath];
-    cell.mod = mod;
-    return cell;
-}
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    YFMerchan *mod = [self.vm getBy:indexPath];
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+- (void)willDismissSearchController:(UISearchController *)searchController{
+    self.vm = self.vm;
 }
 
 
 #pragma mark - actions
+
+-(void)setVm:(YFMerchanList *)vm{
+    _vm = vm;
+    self.tv.datas = vm.allDatas;
+}
 -(void)onAdd{
     
 }
@@ -71,17 +71,16 @@ static NSString *celliden = @"celliden";
     self.navigationItem.rightBarButtonItems = @[additem,scanitem];
 
     
-    self.tv = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
-    self.tv.bounces=YES;
-    self.tv.separatorStyle=UITableViewCellSeparatorStyleSingleLine;
-    self.tv.tableFooterView=[[UIView alloc]init];
-    self.tv.delegate=self;
-    self.tv.dataSource=self;
-    self.tv.backgroundColor=iColor(0xFB, 0xFB, 0xFB, 1);
-    [self.tv registerClass:[YFMerchantCell class] forCellReuseIdentifier:celliden];
-    self.tv.rowHeight=UITableViewAutomaticDimension;
-    self.tv.estimatedRowHeight = 100;
+    self.navigationItem.hidesSearchBarWhenScrolling = NO;
+    self.searchVC = [[YFMerchanSearchVC alloc]initWithSearchResultsController:nil];
+    self.searchVC.delegate =  self;
+    self.searchVC.searchResultsUpdater = self;
+    self.searchVC.searchBar.delegate = self;
+    self.navigationItem.searchController = self.searchVC;
+    self.definesPresentationContext = YES;
     
+    self.tv = [[YFMerchanListTv alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
+   
     
     
     // layout ------
