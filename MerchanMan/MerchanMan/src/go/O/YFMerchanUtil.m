@@ -11,11 +11,10 @@
 #import "BCQRCodeAddVC.h"
 
 @implementation YFMerchanUtil
-+(void)gotoScan{
++(void)gotoScan:(void (^)(NSString *result))cb{
     BCQRCodeAddVC *vc = [[BCQRCodeAddVC alloc]init];
+    vc.onScanResult = cb;
     [UIViewController pushVC:vc];
 }
-+(void)postScanResult:(NSString *)result{
-    [iNotiCenter postNotificationName:kYFMerchanScanCodeNoti object:result];
-}
+
 @end

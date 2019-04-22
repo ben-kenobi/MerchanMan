@@ -10,4 +10,3 @@
 
 #import "YFMerchanConst.h"
 
-NSString *const kYFMerchanScanCodeNoti=@"kYFMerchanScanCodeNoti";

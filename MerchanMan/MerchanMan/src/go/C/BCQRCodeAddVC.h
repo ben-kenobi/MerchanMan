@@ -9,5 +9,5 @@
 #import "YFBasicVC.h"
 
 @interface BCQRCodeAddVC : YFBasicVC
-
+@property (nonatomic,copy)void (^onScanResult)(NSString *result);
 @end

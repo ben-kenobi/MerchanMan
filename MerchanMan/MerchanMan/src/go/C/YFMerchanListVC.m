@@ -13,6 +13,7 @@
 #import "YFMerchanSearchVC.h"
 #import "YFMerchanListTv.h"
 #import "YFMerchanResultListVC.h"
+#import "YFMerchanEditVC.h"
 
 
 
@@ -32,14 +33,12 @@
     [super viewDidLoad];
     [self initUI];
     self.vm = YFMerchanList.shared;
-    [iNotiCenter addObserver:self selector:@selector(onScanResult:) name:kYFMerchanScanCodeNoti object:nil];
 }
 -(void)dealloc{
     [iNotiCenter removeObserver:self];
 }
 
--(void)onScanResult:(NSNotification *)noti{
-    NSString *result = noti.object;
+-(void)onScanResult:(NSString *)result{
     NSArray *datas = [self.vm queryByCode:result];
     YFMerchanResultListVC *vc = [[YFMerchanResultListVC alloc]init];
     vc.datas = datas;
@@ -66,10 +65,13 @@
     self.tv.datas = vm.allDatas;
 }
 -(void)onAdd{
-    
+    YFMerchanEditVC *vc = [[YFMerchanEditVC alloc]init];
+    [UIViewController pushVC:vc];
 }
 -(void)onScan{
-    [YFMerchanUtil gotoScan];
+    [YFMerchanUtil gotoScan:^(NSString * _Nonnull result) {
+        [self onScanResult:result];
+    }];
 }
 
 

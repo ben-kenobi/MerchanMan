@@ -11,8 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface YFMerchanUtil : NSObject
-+(void)gotoScan;
-+(void)postScanResult:(NSString *)result;
++(void)gotoScan:(void (^)(NSString *result))cb;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -56,7 +56,8 @@
 
 -(void)handleResult:(NSString *)result scan:(BOOL)scan{
     [self.navigationController popToRootViewControllerAnimated:NO];
-    [YFMerchanUtil postScanResult:result];
+    if(self.onScanResult)
+        self.onScanResult(result);
 }
 
 #pragma mark - UI
