@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)add:(YFMerchan *)mod;
 -(void)rm:(YFMerchan *)mod;
 -(NSArray<YFMerchan *> *)queryBy:(NSString *)likeName;
+-(NSArray<YFMerchan *> *)queryByCode:(NSString *)barCode;
 -(NSArray<YFMerchan *> *)allDatas;
 @end
 

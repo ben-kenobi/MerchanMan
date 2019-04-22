@@ -58,6 +58,15 @@
     NSArray *ary = [self.merchans filteredArrayUsingPredicate:pre];
     return ary;
 }
+-(NSArray<YFMerchan *> *)queryByCode:(NSString *)barCode{
+    NSMutableArray *mary = [NSMutableArray array];
+    for(YFMerchan *mod in self.merchans){
+        if([mod.barCode.lowercaseString isEqualToString:barCode.lowercaseString]){
+            [mary addObject:mod];
+        }
+    }
+    return [NSArray arrayWithArray:mary];
+}
 
 -(NSArray<YFMerchan *> *)allDatas{
     return self.merchans;
@@ -76,6 +85,7 @@
         mod.outPrice = @"240";
         mod.remark = @"remat\nwlkekrlwekrlwrentma";
         mod.iconPaths = @[iRes(@"personal_bg@2x.png")];
+        mod.barCode = @"123H123";
         [instance.merchans addObject:mod];
         [instance.merchans addObject:mod];[instance.merchans addObject:mod];
         [instance.merchans addObject:mod];

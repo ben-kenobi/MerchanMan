@@ -38,6 +38,18 @@
 		A57D4943226B7A55004392C5 /* personal_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A57D4942226B7A55004392C5 /* personal_bg@2x.png */; };
 		A57D4949226CA72D004392C5 /* YFMerchanSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A57D4948226CA72D004392C5 /* YFMerchanSearchVC.m */; };
 		A57D494F226CB65A004392C5 /* YFMerchanListTv.m in Sources */ = {isa = PBXBuildFile; fileRef = A57D494E226CB65A004392C5 /* YFMerchanListTv.m */; };
+		B8599930226DAA1900547061 /* YFMerchanResultListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B859992F226DAA1900547061 /* YFMerchanResultListVC.m */; };
+		B8599933226DAE8D00547061 /* YFMerchanInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B8599932226DAE8D00547061 /* YFMerchanInfoVC.m */; };
+		B8599938226DB2FD00547061 /* BCCountTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8599935226DB2FD00547061 /* BCCountTextView.m */; };
+		B8599939226DB2FD00547061 /* BCCustTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8599936226DB2FD00547061 /* BCCustTextView.m */; };
+		B859993C226DB49C00547061 /* BCImgAttach.m in Sources */ = {isa = PBXBuildFile; fileRef = B859993A226DB49C00547061 /* BCImgAttach.m */; };
+		B859993F226DBF5C00547061 /* YFMerchanEditVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B859993E226DBF5C00547061 /* YFMerchanEditVC.m */; };
+		B8C2AC1F226D966D009F1116 /* BCQRCodeScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C2AC1E226D966D009F1116 /* BCQRCodeScanView.m */; };
+		B8C2AC22226D9698009F1116 /* BCQRCodeAddVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C2AC20226D9698009F1116 /* BCQRCodeAddVC.m */; };
+		B8C2AC25226D9719009F1116 /* BCTopIconBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C2AC23226D9719009F1116 /* BCTopIconBtn.m */; };
+		B8C2AC28226D974D009F1116 /* BCManualEnterSNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C2AC26226D974D009F1116 /* BCManualEnterSNVC.m */; };
+		B8C2AC2C226D99EE009F1116 /* YFMerchanUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C2AC2B226D99EE009F1116 /* YFMerchanUtil.m */; };
+		B8C2AC2F226D9DBD009F1116 /* YFMerchanConst.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C2AC2E226D9DBD009F1116 /* YFMerchanConst.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,11 +103,35 @@
 		A57D493D226B3FA4004392C5 /* YFMerchanList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFMerchanList.m; sourceTree = "<group>"; };
 		A57D493F226B5969004392C5 /* YFMerchantCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFMerchantCell.h; sourceTree = "<group>"; };
 		A57D4940226B5969004392C5 /* YFMerchantCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFMerchantCell.m; sourceTree = "<group>"; };
-		A57D4942226B7A55004392C5 /* personal_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "personal_bg@2x.png"; path = "MerchanMan/Assets.xcassets/personal_bg.imageset/personal_bg@2x.png"; sourceTree = SOURCE_ROOT; };
+		A57D4942226B7A55004392C5 /* personal_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "personal_bg@2x.png"; path = "MerchanMan/src/go/O/personal_bg@2x.png"; sourceTree = SOURCE_ROOT; };
 		A57D4947226CA72D004392C5 /* YFMerchanSearchVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFMerchanSearchVC.h; sourceTree = "<group>"; };
 		A57D4948226CA72D004392C5 /* YFMerchanSearchVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFMerchanSearchVC.m; sourceTree = "<group>"; };
 		A57D494D226CB65A004392C5 /* YFMerchanListTv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFMerchanListTv.h; sourceTree = "<group>"; };
 		A57D494E226CB65A004392C5 /* YFMerchanListTv.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFMerchanListTv.m; sourceTree = "<group>"; };
+		B859992E226DAA1900547061 /* YFMerchanResultListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFMerchanResultListVC.h; sourceTree = "<group>"; };
+		B859992F226DAA1900547061 /* YFMerchanResultListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFMerchanResultListVC.m; sourceTree = "<group>"; };
+		B8599931226DAE8D00547061 /* YFMerchanInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFMerchanInfoVC.h; sourceTree = "<group>"; };
+		B8599932226DAE8D00547061 /* YFMerchanInfoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFMerchanInfoVC.m; sourceTree = "<group>"; };
+		B8599934226DB2FD00547061 /* BCCustTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCCustTextView.h; sourceTree = "<group>"; };
+		B8599935226DB2FD00547061 /* BCCountTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCCountTextView.m; sourceTree = "<group>"; };
+		B8599936226DB2FD00547061 /* BCCustTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCCustTextView.m; sourceTree = "<group>"; };
+		B8599937226DB2FD00547061 /* BCCountTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCCountTextView.h; sourceTree = "<group>"; };
+		B859993A226DB49C00547061 /* BCImgAttach.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCImgAttach.m; sourceTree = "<group>"; };
+		B859993B226DB49C00547061 /* BCImgAttach.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCImgAttach.h; sourceTree = "<group>"; };
+		B859993D226DBF5C00547061 /* YFMerchanEditVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFMerchanEditVC.h; sourceTree = "<group>"; };
+		B859993E226DBF5C00547061 /* YFMerchanEditVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFMerchanEditVC.m; sourceTree = "<group>"; };
+		B8C2AC1D226D966D009F1116 /* BCQRCodeScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCQRCodeScanView.h; sourceTree = "<group>"; };
+		B8C2AC1E226D966D009F1116 /* BCQRCodeScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCQRCodeScanView.m; sourceTree = "<group>"; };
+		B8C2AC20226D9698009F1116 /* BCQRCodeAddVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCQRCodeAddVC.m; sourceTree = "<group>"; };
+		B8C2AC21226D9698009F1116 /* BCQRCodeAddVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCQRCodeAddVC.h; sourceTree = "<group>"; };
+		B8C2AC23226D9719009F1116 /* BCTopIconBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCTopIconBtn.m; sourceTree = "<group>"; };
+		B8C2AC24226D9719009F1116 /* BCTopIconBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCTopIconBtn.h; sourceTree = "<group>"; };
+		B8C2AC26226D974D009F1116 /* BCManualEnterSNVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCManualEnterSNVC.m; sourceTree = "<group>"; };
+		B8C2AC27226D974D009F1116 /* BCManualEnterSNVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCManualEnterSNVC.h; sourceTree = "<group>"; };
+		B8C2AC2A226D99EE009F1116 /* YFMerchanUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFMerchanUtil.h; sourceTree = "<group>"; };
+		B8C2AC2B226D99EE009F1116 /* YFMerchanUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFMerchanUtil.m; sourceTree = "<group>"; };
+		B8C2AC2D226D9DBD009F1116 /* YFMerchanConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFMerchanConst.h; sourceTree = "<group>"; };
+		B8C2AC2E226D9DBD009F1116 /* YFMerchanConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFMerchanConst.m; sourceTree = "<group>"; };
 		D23C8B882E46D766E855EE64 /* Pods-MerchanMan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MerchanMan.release.xcconfig"; path = "Pods/Target Support Files/Pods-MerchanMan/Pods-MerchanMan.release.xcconfig"; sourceTree = "<group>"; };
 		EBB4D787FC494727483F1251 /* Pods_MerchanMan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MerchanMan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -202,6 +238,7 @@
 		A57D48F1226A1559004392C5 /* go */ = {
 			isa = PBXGroup;
 			children = (
+				B8C2AC29226D99DC009F1116 /* O */,
 				A57D48F2226A1559004392C5 /* M */,
 				A57D48F9226A1559004392C5 /* C */,
 				A57D48FC226A1559004392C5 /* V */,
@@ -212,7 +249,6 @@
 		A57D48F2226A1559004392C5 /* M */ = {
 			isa = PBXGroup;
 			children = (
-				A57D4942226B7A55004392C5 /* personal_bg@2x.png */,
 				A57D4939226B3F97004392C5 /* YFMerchan.h */,
 				A57D493A226B3F97004392C5 /* YFMerchan.m */,
 				A57D493C226B3FA4004392C5 /* YFMerchanList.h */,
@@ -228,6 +264,16 @@
 				A57D48FB226A1559004392C5 /* YFMerchanListVC.m */,
 				A57D4947226CA72D004392C5 /* YFMerchanSearchVC.h */,
 				A57D4948226CA72D004392C5 /* YFMerchanSearchVC.m */,
+				B8C2AC21226D9698009F1116 /* BCQRCodeAddVC.h */,
+				B8C2AC20226D9698009F1116 /* BCQRCodeAddVC.m */,
+				B8C2AC27226D974D009F1116 /* BCManualEnterSNVC.h */,
+				B8C2AC26226D974D009F1116 /* BCManualEnterSNVC.m */,
+				B859992E226DAA1900547061 /* YFMerchanResultListVC.h */,
+				B859992F226DAA1900547061 /* YFMerchanResultListVC.m */,
+				B8599931226DAE8D00547061 /* YFMerchanInfoVC.h */,
+				B8599932226DAE8D00547061 /* YFMerchanInfoVC.m */,
+				B859993D226DBF5C00547061 /* YFMerchanEditVC.h */,
+				B859993E226DBF5C00547061 /* YFMerchanEditVC.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -235,10 +281,20 @@
 		A57D48FC226A1559004392C5 /* V */ = {
 			isa = PBXGroup;
 			children = (
+				B859993B226DB49C00547061 /* BCImgAttach.h */,
+				B859993A226DB49C00547061 /* BCImgAttach.m */,
+				B8599937226DB2FD00547061 /* BCCountTextView.h */,
+				B8599935226DB2FD00547061 /* BCCountTextView.m */,
+				B8599934226DB2FD00547061 /* BCCustTextView.h */,
+				B8599936226DB2FD00547061 /* BCCustTextView.m */,
+				B8C2AC1D226D966D009F1116 /* BCQRCodeScanView.h */,
+				B8C2AC1E226D966D009F1116 /* BCQRCodeScanView.m */,
 				A57D493F226B5969004392C5 /* YFMerchantCell.h */,
 				A57D4940226B5969004392C5 /* YFMerchantCell.m */,
 				A57D494D226CB65A004392C5 /* YFMerchanListTv.h */,
 				A57D494E226CB65A004392C5 /* YFMerchanListTv.m */,
+				B8C2AC24226D9719009F1116 /* BCTopIconBtn.h */,
+				B8C2AC23226D9719009F1116 /* BCTopIconBtn.m */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -301,6 +357,18 @@
 				A57D491A226A1559004392C5 /* BCUserInfoCell.h */,
 			);
 			path = V;
+			sourceTree = "<group>";
+		};
+		B8C2AC29226D99DC009F1116 /* O */ = {
+			isa = PBXGroup;
+			children = (
+				A57D4942226B7A55004392C5 /* personal_bg@2x.png */,
+				B8C2AC2A226D99EE009F1116 /* YFMerchanUtil.h */,
+				B8C2AC2B226D99EE009F1116 /* YFMerchanUtil.m */,
+				B8C2AC2D226D9DBD009F1116 /* YFMerchanConst.h */,
+				B8C2AC2E226D9DBD009F1116 /* YFMerchanConst.m */,
+			);
+			path = O;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,9 +474,10 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MerchanMan/Pods-MerchanMan-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MerchanMan/Pods-MerchanMan-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/IOS_OC_BASIC/IOS_OC_BASIC.framework",
+				"${BUILT_PRODUCTS_DIR}/KSPhotoBrowser/KSPhotoBrowser.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/RealReachability/RealReachability.framework",
@@ -421,6 +490,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IOS_OC_BASIC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KSPhotoBrowser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealReachability.framework",
@@ -429,7 +499,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MerchanMan/Pods-MerchanMan-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MerchanMan/Pods-MerchanMan-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -439,20 +509,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8599933226DAE8D00547061 /* YFMerchanInfoVC.m in Sources */,
 				A57D4924226A1559004392C5 /* main.m in Sources */,
 				A57D4932226A1559004392C5 /* YFNavVC.m in Sources */,
+				B8599930226DAA1900547061 /* YFMerchanResultListVC.m in Sources */,
+				B859993C226DB49C00547061 /* BCImgAttach.m in Sources */,
 				A57D4935226A1559004392C5 /* YFBasicVC.m in Sources */,
+				B8C2AC2F226D9DBD009F1116 /* YFMerchanConst.m in Sources */,
+				B8C2AC28226D974D009F1116 /* BCManualEnterSNVC.m in Sources */,
 				A57D4931226A1559004392C5 /* BCLeftMenuVC.m in Sources */,
 				A57D493E226B3FA4004392C5 /* YFMerchanList.m in Sources */,
 				A57D492B226A1559004392C5 /* YFMerchanListVC.m in Sources */,
+				B8C2AC25226D9719009F1116 /* BCTopIconBtn.m in Sources */,
 				A57D493B226B3F97004392C5 /* YFMerchan.m in Sources */,
+				B8C2AC22226D9698009F1116 /* BCQRCodeAddVC.m in Sources */,
 				A57D4938226A1559004392C5 /* BCMenuCell.m in Sources */,
 				A57D4937226A1559004392C5 /* BCCoverView.m in Sources */,
+				B8599939226DB2FD00547061 /* BCCustTextView.m in Sources */,
 				A57D4949226CA72D004392C5 /* YFMerchanSearchVC.m in Sources */,
 				A57D4920226A1559004392C5 /* BCBaseHttpClient.m in Sources */,
 				A57D4925226A1559004392C5 /* AppDelegate.m in Sources */,
+				B859993F226DBF5C00547061 /* YFMerchanEditVC.m in Sources */,
+				B8C2AC1F226D966D009F1116 /* BCQRCodeScanView.m in Sources */,
+				B8C2AC2C226D99EE009F1116 /* YFMerchanUtil.m in Sources */,
 				A57D4934226A1559004392C5 /* YFMainNav.m in Sources */,
 				A57D494F226CB65A004392C5 /* YFMerchanListTv.m in Sources */,
+				B8599938226DB2FD00547061 /* BCCountTextView.m in Sources */,
 				A57D4930226A1559004392C5 /* BCMenuList.m in Sources */,
 				A57D491D226A1559004392C5 /* H264VideoParser.m in Sources */,
 				A57D4933226A1559004392C5 /* YFMainVC2.m in Sources */,
@@ -607,6 +689,7 @@
 				DEVELOPMENT_TEAM = 6U96F6BXWV;
 				GCC_PREFIX_HEADER = MerchanMan/Utils/PrefixHeader.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/MerchanMan/info/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -626,6 +709,7 @@
 				DEVELOPMENT_TEAM = 6U96F6BXWV;
 				GCC_PREFIX_HEADER = MerchanMan/Utils/PrefixHeader.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/MerchanMan/info/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

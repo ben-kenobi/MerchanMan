@@ -5,4 +5,5 @@ target 'MerchanMan' do
   pod 'IOS_OC_BASIC'
   pod 'SVProgressHUD'
   pod 'SDWebImage'
+  pod 'KSPhotoBrowser'
 end

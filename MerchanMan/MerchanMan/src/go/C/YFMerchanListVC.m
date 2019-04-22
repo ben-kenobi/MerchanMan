@@ -12,6 +12,7 @@
 #import "YFMerchan.h"
 #import "YFMerchanSearchVC.h"
 #import "YFMerchanListTv.h"
+#import "YFMerchanResultListVC.h"
 
 
 
@@ -31,7 +32,18 @@
     [super viewDidLoad];
     [self initUI];
     self.vm = YFMerchanList.shared;
-    
+    [iNotiCenter addObserver:self selector:@selector(onScanResult:) name:kYFMerchanScanCodeNoti object:nil];
+}
+-(void)dealloc{
+    [iNotiCenter removeObserver:self];
+}
+
+-(void)onScanResult:(NSNotification *)noti{
+    NSString *result = noti.object;
+    NSArray *datas = [self.vm queryByCode:result];
+    YFMerchanResultListVC *vc = [[YFMerchanResultListVC alloc]init];
+    vc.datas = datas;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
@@ -57,7 +69,7 @@
     
 }
 -(void)onScan{
-    
+    [YFMerchanUtil gotoScan];
 }
 
 

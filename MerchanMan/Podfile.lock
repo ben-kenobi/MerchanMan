@@ -19,6 +19,8 @@ PODS:
     - Masonry
     - MJRefresh
     - RealReachability
+  - KSPhotoBrowser (0.3.0):
+    - SDWebImage (~> 5.0)
   - Masonry (1.1.0)
   - MJRefresh (3.1.16)
   - RealReachability (1.3.0):
@@ -33,6 +35,7 @@ PODS:
 
 DEPENDENCIES:
   - IOS_OC_BASIC
+  - KSPhotoBrowser
   - SDWebImage
   - SVProgressHUD
 
@@ -40,6 +43,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - IOS_OC_BASIC
+    - KSPhotoBrowser
     - Masonry
     - MJRefresh
     - RealReachability
@@ -49,12 +53,13 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   IOS_OC_BASIC: d3cf0e4d3c466dbc5278621c0e6c79c5ac87c67c
+  KSPhotoBrowser: 556fc4c4880e04a87b5990ab13cdc08d8478d40e
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: 7798e16e53a5ef7f332dd05b27664db4e29530fd
   RealReachability: eae9c58d2db52fadd8e1cba4b5d4c028454fbc47
   SDWebImage: 27dd2c9ea07a2252f94557c9fbb6105ee94b74c9
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 8002642f7a3a3732f44b6521028e7cb7a2dbf056
+PODFILE CHECKSUM: 5947a030508c1cda76fd10b7c0b9c6ca89ea5e85
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0

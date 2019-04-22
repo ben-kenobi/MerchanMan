@@ -10,6 +10,7 @@
 #import "YFMerchanList.h"
 #import "YFMerchantCell.h"
 #import "YFMerChan.h"
+#import "YFMerchanInfoVC.h"
 
 
 static NSString *celliden = @"celliden";
@@ -41,8 +42,12 @@ static NSString *celliden = @"celliden";
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    YFMerchan *mod = self.datas[indexPath.row];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    YFMerchan *mod = self.datas[indexPath.row];
+    YFMerchanInfoVC *vc = [[YFMerchanInfoVC alloc]init];
+    vc.mod = mod;
+    [UIViewController pushVC:vc];
 }
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     YFMerchan *mod = self.datas[indexPath.row];

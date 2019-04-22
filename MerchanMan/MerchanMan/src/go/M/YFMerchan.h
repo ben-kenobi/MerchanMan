@@ -17,10 +17,12 @@
 @property (nonatomic,strong)NSString *remark;
 @property (nonatomic,strong)NSString *inPrice;
 @property (nonatomic,strong)NSString *outPrice;
+@property (nonatomic,strong)NSString *barCode;
 @property (nonatomic,strong)NSDate *addTime;
 @property (nonatomic,strong)NSDate *updateTime;
 
 -(NSAttributedString *)detailAttrDesc;
+-(NSAttributedString *)fullAttrDesc;
 -(NSURL *)defIconUrl;
 -(UIImage *)defIcon;
 @end

@@ -17,6 +17,8 @@
 #import "YFCate.h"
 #import "AppDelegate.h"
 #import "YFUtil.h"
+#import "YFMerchanUtil.h"
+#import "YFMerchanConst.h"
 #endif
 #ifndef IOS_MAIN_CONTAINER_FLAG
 #define IOS_MAIN_CONTAINER_FLAG
