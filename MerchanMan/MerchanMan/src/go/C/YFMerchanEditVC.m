@@ -20,7 +20,6 @@
 @property (nonatomic,strong)BCCustTf *nametf;
 @property (nonatomic,strong)BCCustTf *inPricetf;
 @property (nonatomic,strong)BCCustTf *outPricetf;
-@property (nonatomic,strong)BCCustTf *remarktf;
 
 @property (nonatomic,strong)BCCountTextView *countTv;
 @property (nonatomic,strong)UIScrollView *sv;
@@ -41,8 +40,10 @@
 }
 #pragma mark - datas
 -(void)updateUI{
+    if(self.mod){
     //    self.nametf.text = self.match.title;
     //    self.countTv.textView.text=self.match.remark;
+    }
 }
 
 #pragma mark - actions
