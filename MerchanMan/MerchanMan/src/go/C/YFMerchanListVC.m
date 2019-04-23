@@ -70,6 +70,7 @@
 }
 -(void)onScan{
     [YFMerchanUtil gotoScan:^(NSString * _Nonnull result) {
+        [self.navigationController popToViewController:self animated:NO];
         [self onScanResult:result];
     }];
 }

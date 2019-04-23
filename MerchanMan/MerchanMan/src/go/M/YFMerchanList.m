@@ -32,8 +32,8 @@
     [self archive];
 }
 -(void)saveMerchant:(YFMerchan *)mod{
-    mod.updateTime = [NSDate date];
     if([self.merchans containsObject:mod]){
+        mod.updateTime = [NSDate date];
         [self.merchans replaceObjectAtIndex:[self.merchans indexOfObject:mod] withObject:mod];
         [self save];
     }else{
@@ -47,6 +47,7 @@
 }
 -(void)rm:(YFMerchan *)mod{
     [self.merchans removeObject:mod];
+    [YFMerchanUtil rmImgs:mod.iconPaths];
     [self save];
 }
 -(void)rmAt:(NSIndexPath *)indexpath{

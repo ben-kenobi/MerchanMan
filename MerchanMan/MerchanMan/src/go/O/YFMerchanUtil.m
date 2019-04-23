@@ -13,6 +13,26 @@
 
 @implementation YFMerchanUtil
 
++(NSString *)fullImgPathByID:(NSString *)ID{
+    return [iFormatStr(@"imgsDir/%@",ID) strByAppendToDocPath];
+}
++(BOOL)saveImg:(UIImage *)img ID:(NSString *)ID{
+    NSString *dir = [@"imgsDir/" strByAppendToDocPath];
+    BOOL  exist = [iFm fileExistsAtPath:dir];
+    if(!exist){
+        [iFm createDirectoryAtPath:dir withIntermediateDirectories:YES attributes:0 error:0];
+    }
+    NSString *path = iFormatStr(@"%@%@",dir,ID);
+    BOOL result = [UIImageJPEGRepresentation(img, .7) writeToFile:path atomically:YES];
+    return result;
+}
++(BOOL)rmImgs:(NSArray<NSString *> *)IDS{
+    for(NSString *ID in IDS){
+        [FileUtil rmFiles:@[[self fullImgPathByID:ID]]];
+    }
+    return YES;
+}
+
 +(void)gotoAppSetting{
     NSURL * url = iURL(UIApplicationOpenSettingsURLString);
     if([iApp canOpenURL:url]) {
@@ -58,4 +78,18 @@
     }];
 }
 
+
++(void)photoChooser:(id)dele{
+    UIAlertController *vc = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:(UIAlertControllerStyleActionSheet)];
+    UIAlertAction *camAction = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self gotoCamera:dele edit:YES];
+    }];
+    UIAlertAction *albumAction = [UIAlertAction actionWithTitle:@"相册" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self gotoAlbum:dele edit:YES];
+    }];
+    [vc addAction:camAction];
+    [vc addAction:albumAction];
+    [vc addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+    [UIViewController.topVC presentViewController:vc animated:YES completion:0];
+}
 @end

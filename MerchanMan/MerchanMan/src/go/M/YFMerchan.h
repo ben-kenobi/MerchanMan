@@ -12,7 +12,7 @@
 
 @interface YFMerchan : YFCodecObj
 @property (nonatomic,strong)NSString *ID;
-@property (nonatomic,strong)NSArray<NSString *> *iconPaths;
+@property (nonatomic,strong)NSArray<NSString *> *iconIDs;
 @property (nonatomic,strong)NSString *name;
 @property (nonatomic,strong)NSString *remark;
 @property (nonatomic,strong)NSString *inPrice;

@@ -55,7 +55,6 @@
 }
 
 -(void)handleResult:(NSString *)result scan:(BOOL)scan{
-    [self.navigationController popToRootViewControllerAnimated:NO];
     if(self.onScanResult)
         self.onScanResult(result);
 }

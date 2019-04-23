@@ -15,6 +15,10 @@
 #import "BCCountTextView.h"
 #import "YFMerchan.h"
 
+static CGFloat imgW = 900;
+static CGFloat imgCompressionFactor = .7;
+
+
 
 @interface YFMerchanEditVC ()<UIScrollViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property (nonatomic,strong)UIButton *imgBtn;
@@ -38,7 +42,7 @@
 }
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [self.nametf becomeFirstResponder];
+//    [self.nametf becomeFirstResponder];
 }
 #pragma mark - datas
 -(void)updateUI{
@@ -54,10 +58,24 @@
 #pragma mark - actions
 -(void)save:(id)sender{
     [self.view endEditing:YES];
+    if(self.mod){
+        //update
+    }else{
+        //add
+        YFMerchan *mod = [[YFMerchan alloc]init];
+        mod.
+    }
+}
+
+-(void)onScan{
+    [YFMerchanUtil gotoScan:^(NSString * _Nonnull result) {
+        self.codeLab.text = result;
+        [self.navigationController popToViewController:self animated:YES];
+    }];
 }
 
 -(void)onAddImg{
-    
+    [YFMerchanUtil photoChooser:self];
 }
 
 -(void)onKeyboardChange:(NSNotification *)noti{
@@ -74,45 +92,21 @@
         [self.view layoutIfNeeded];
     }];
     if(self.countTv.textView.isFirstResponder){
-        //        [self.tv scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1] atScrollPosition:(UITableViewScrollPositionBottom) animated:YES];
+        [self.sv scrollRectToVisible:self.countTv.frame animated:YES];
     }
 }
 
 
 #pragma mark- UIImagePickerControllerDelegate
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
-//    [picker dismissViewControllerAnimated:YES completion:nil];
+    [picker dismissViewControllerAnimated:YES completion:nil];
 //    UIImage * img=info[UIImagePickerControllerOriginalImage];
-//    //    NSString *str = [(NSURL *)info[@"UIImagePickerControllerImageURL"] path];
-//    //    img = img.scale2w(1000);
-//    //    self.avatar=img;
-//
-//    /*
-//     BCPhotoTakeBtn *photoBtn=[self.photoBtnArr objectAtIndex:curPhotoIdx];
-//     [photoBtn setSelectedImage:img];
-//     */
-//
-//    BCFaceSelectVC *vc = [[BCFaceSelectVC alloc]init];
-//    vc.retakeCB = ^{
-//        if(self->chooseType==1){
-//            [self selectPic];
-//        }else{
-//            [self startCamera];
-//        }
-//    };
-//    vc.img=img;
-//    //    vc.facestate=self.curFaceState;
-//    vc.facestate = BCFaceFrontal;
-//    if (curPhotoIdx!=99) {
-//        BCPhotoTakeBtn *btn = [self hasPhotoBtnExceptCurBtn];
-//        if(btn){
-//            [vc setExistFeature:&(btn->faceFeature)];
-//        }
-//    }
-//    [vc setCb:^(UIImage *img,NSArray<NSString *>*lanmark21, rs_face_feature feature) {
-//        [self setAvatar:img lanmark21:lanmark21 feature:feature];
-//    }];
-//    [UIViewController pushVC:vc];
+//    NSString *str = [(NSURL *)info[@"UIImagePickerControllerImageURL"] path];
+    
+    UIImage * img=info[UIImagePickerControllerEditedImage];
+    img = [img scale2PreciseW:imgW];
+    [self.imgBtn setImage:img forState:0];
+  
 }
 
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
@@ -120,8 +114,9 @@
 }
 
 #pragma mark - UISCrollViewDelegate
--(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
-    [self.view endEditing:YES];
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    if(scrollView.contentOffset.y < -25)
+        [self.view endEditing:YES];
 }
 #pragma mark - UI
 -(void)initUI{
@@ -161,9 +156,10 @@
     //subviews
     
     self.imgBtn = [[UIButton alloc]init];
-    [self.imgBtn setBackgroundImage:img(@"img_add_icon") forState:0];
-    [self.imgBtn setBackgroundImage:[img(@"img_add_icon") renderWithColor:iGlobalDisableColor] forState:UIControlStateHighlighted];
+    [self.imgBtn setBackgroundImage:img(@"add_picture_icon") forState:0];
     [self.imgBtn addTarget:self action:@selector(onAddImg) forControlEvents:UIControlEventTouchUpInside];
+    self.imgBtn.imageView.layer.cornerRadius = 4;
+    self.imgBtn.imageView.clipsToBounds = YES;
     
     self.nametf = [self commonTf];
     UIView *nameV = [self titleLab:@"名称：" NContentView:self.nametf];
@@ -174,6 +170,9 @@
     self.outPricetf.keyboardType = UIKeyboardTypeDecimalPad;
     UIView *outPriceV = [self titleLab:@"出价：" NContentView:self.outPricetf];
     
+    UIView *codeV = [self barCodeContainer];
+    
+    UIView *remarkV = [self remarkContainer];
     
     //subviews layout ---
     UIView *lastV = nil;
@@ -181,6 +180,8 @@
     [self.contentView addSubview:nameV];
     [self.contentView addSubview:inPriceV];
     [self.contentView addSubview:outPriceV];
+    [self.contentView addSubview:codeV];
+    [self.contentView addSubview:remarkV];
 
     [self.imgBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.top.equalTo(@0);
@@ -203,10 +204,21 @@
         make.leading.trailing.height.equalTo(inPriceV);
         make.top.equalTo(inPriceV.mas_bottom);
     }];
+    [codeV mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.trailing.equalTo(nameV);
+        make.top.equalTo(nameV.mas_bottom).offset(6);
+        make.height.equalTo(@60);
+    }];
+    
+    [remarkV mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.trailing.equalTo(nameV);
+        make.top.equalTo(codeV.mas_bottom).offset(12);
+        make.height.equalTo(@120);
+    }];
     
     
     
-    lastV = nameV;
+    lastV = remarkV;
     [lastV mas_updateConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(@0);
     }];
@@ -214,6 +226,56 @@
 }
 
 
+-(UIView *)remarkContainer{
+    UIView *container = [[UIView alloc]init];
+    UILabel *lab = [IProUtil commonLab:iFont(17) color:iColor(0x66, 0x66, 0x66, 1)];
+    lab.text = @"备注：";
+    [container addSubview:lab];
+    [container addSubview:self.countTv];
+    [lab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.equalTo(@0);
+        make.top.equalTo(@0);
+    }];
+    [self.countTv mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.equalTo(lab.mas_trailing).offset(8);
+        make.height.equalTo(container);
+        make.trailing.equalTo(@0);
+    }];
+    return container;
+}
+
+-(UIView *)barCodeContainer{
+    UIView *container = [[UIView alloc]init];
+    UILabel *lab = [IProUtil commonLab:iFont(17) color:iColor(0x66, 0x66, 0x66, 1)];
+    lab.text = @"条码：";
+    self.codeLab = [IProUtil commonLab:iFont(16) color:iColor(0x33, 0x33, 0x33, 1)];
+    self.codeLab.lineBreakMode = NSLineBreakByTruncatingMiddle;
+    UIButton *scanBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    [scanBtn setImage:[img(@"scanicon") renderWithColor:iGlobalFocusColor] forState:0];
+    scanBtn.contentEdgeInsets = UIEdgeInsetsMake(8, 8, 8, 8);
+    [scanBtn addTarget:self action:@selector(onScan) forControlEvents:UIControlEventTouchUpInside];
+    [container addSubview:lab];
+    [container addSubview:self.codeLab];
+    [container addSubview:scanBtn];
+    [lab measurePriority:1000 hor:YES];
+    [scanBtn measurePriority:999 hor:YES];
+    
+    [lab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.equalTo(@0);
+        make.centerY.equalTo(@0);
+    }];
+    [self.codeLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.equalTo(lab.mas_trailing).offset(8);
+        make.centerY.equalTo(@0);
+    }];
+    [scanBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.equalTo(self.codeLab.mas_trailing).offset(2);
+        make.centerY.equalTo(@0);
+        make.trailing.lessThanOrEqualTo(@0);
+    }];
+    
+    return container;
+}
 
 -(UIView *)titleLab:(NSString *)title NContentView:(UIView *)contentView{
     UIView *container = [[UIView alloc]init];
@@ -268,6 +330,8 @@
     _countTv=[[BCCountTextView alloc]init];
     _countTv.maxCharacters = 600;
     _countTv.textView.placeholder = @"";
+    _countTv.layer.borderColor=iCommonSeparatorColor.CGColor;
+    _countTv.layer.borderWidth=1;
     return _countTv;
 }
 
