@@ -44,6 +44,7 @@
 		B8599939226DB2FD00547061 /* BCCustTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8599936226DB2FD00547061 /* BCCustTextView.m */; };
 		B859993C226DB49C00547061 /* BCImgAttach.m in Sources */ = {isa = PBXBuildFile; fileRef = B859993A226DB49C00547061 /* BCImgAttach.m */; };
 		B859993F226DBF5C00547061 /* YFMerchanEditVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B859993E226DBF5C00547061 /* YFMerchanEditVC.m */; };
+		B8A6CE09226EBF770087BBA3 /* BCPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A6CE07226EBF770087BBA3 /* BCPermission.m */; };
 		B8C2AC1F226D966D009F1116 /* BCQRCodeScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C2AC1E226D966D009F1116 /* BCQRCodeScanView.m */; };
 		B8C2AC22226D9698009F1116 /* BCQRCodeAddVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C2AC20226D9698009F1116 /* BCQRCodeAddVC.m */; };
 		B8C2AC25226D9719009F1116 /* BCTopIconBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C2AC23226D9719009F1116 /* BCTopIconBtn.m */; };
@@ -120,6 +121,8 @@
 		B859993B226DB49C00547061 /* BCImgAttach.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCImgAttach.h; sourceTree = "<group>"; };
 		B859993D226DBF5C00547061 /* YFMerchanEditVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFMerchanEditVC.h; sourceTree = "<group>"; };
 		B859993E226DBF5C00547061 /* YFMerchanEditVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFMerchanEditVC.m; sourceTree = "<group>"; };
+		B8A6CE07226EBF770087BBA3 /* BCPermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPermission.m; sourceTree = "<group>"; };
+		B8A6CE08226EBF770087BBA3 /* BCPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCPermission.h; sourceTree = "<group>"; };
 		B8C2AC1D226D966D009F1116 /* BCQRCodeScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCQRCodeScanView.h; sourceTree = "<group>"; };
 		B8C2AC1E226D966D009F1116 /* BCQRCodeScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCQRCodeScanView.m; sourceTree = "<group>"; };
 		B8C2AC20226D9698009F1116 /* BCQRCodeAddVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCQRCodeAddVC.m; sourceTree = "<group>"; };
@@ -367,6 +370,8 @@
 				B8C2AC2B226D99EE009F1116 /* YFMerchanUtil.m */,
 				B8C2AC2D226D9DBD009F1116 /* YFMerchanConst.h */,
 				B8C2AC2E226D9DBD009F1116 /* YFMerchanConst.m */,
+				B8A6CE08226EBF770087BBA3 /* BCPermission.h */,
+				B8A6CE07226EBF770087BBA3 /* BCPermission.m */,
 			);
 			path = O;
 			sourceTree = "<group>";
@@ -523,6 +528,7 @@
 				B8C2AC25226D9719009F1116 /* BCTopIconBtn.m in Sources */,
 				A57D493B226B3F97004392C5 /* YFMerchan.m in Sources */,
 				B8C2AC22226D9698009F1116 /* BCQRCodeAddVC.m in Sources */,
+				B8A6CE09226EBF770087BBA3 /* BCPermission.m in Sources */,
 				A57D4938226A1559004392C5 /* BCMenuCell.m in Sources */,
 				A57D4937226A1559004392C5 /* BCCoverView.m in Sources */,
 				B8599939226DB2FD00547061 /* BCCustTextView.m in Sources */,

@@ -16,7 +16,7 @@
 #import "YFMerchan.h"
 
 
-@interface YFMerchanEditVC ()<UIScrollViewDelegate>
+@interface YFMerchanEditVC ()<UIScrollViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property (nonatomic,strong)UIButton *imgBtn;
 @property (nonatomic,strong)BCCustTf *nametf;
 @property (nonatomic,strong)BCCustTf *inPricetf;
@@ -78,6 +78,47 @@
     }
 }
 
+
+#pragma mark- UIImagePickerControllerDelegate
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
+//    [picker dismissViewControllerAnimated:YES completion:nil];
+//    UIImage * img=info[UIImagePickerControllerOriginalImage];
+//    //    NSString *str = [(NSURL *)info[@"UIImagePickerControllerImageURL"] path];
+//    //    img = img.scale2w(1000);
+//    //    self.avatar=img;
+//
+//    /*
+//     BCPhotoTakeBtn *photoBtn=[self.photoBtnArr objectAtIndex:curPhotoIdx];
+//     [photoBtn setSelectedImage:img];
+//     */
+//
+//    BCFaceSelectVC *vc = [[BCFaceSelectVC alloc]init];
+//    vc.retakeCB = ^{
+//        if(self->chooseType==1){
+//            [self selectPic];
+//        }else{
+//            [self startCamera];
+//        }
+//    };
+//    vc.img=img;
+//    //    vc.facestate=self.curFaceState;
+//    vc.facestate = BCFaceFrontal;
+//    if (curPhotoIdx!=99) {
+//        BCPhotoTakeBtn *btn = [self hasPhotoBtnExceptCurBtn];
+//        if(btn){
+//            [vc setExistFeature:&(btn->faceFeature)];
+//        }
+//    }
+//    [vc setCb:^(UIImage *img,NSArray<NSString *>*lanmark21, rs_face_feature feature) {
+//        [self setAvatar:img lanmark21:lanmark21 feature:feature];
+//    }];
+//    [UIViewController pushVC:vc];
+}
+
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
 #pragma mark - UISCrollViewDelegate
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
     [self.view endEditing:YES];
@@ -121,6 +162,7 @@
     
     self.imgBtn = [[UIButton alloc]init];
     [self.imgBtn setBackgroundImage:img(@"img_add_icon") forState:0];
+    [self.imgBtn setBackgroundImage:[img(@"img_add_icon") renderWithColor:iGlobalDisableColor] forState:UIControlStateHighlighted];
     [self.imgBtn addTarget:self action:@selector(onAddImg) forControlEvents:UIControlEventTouchUpInside];
     
     self.nametf = [self commonTf];
@@ -134,7 +176,7 @@
     
     
     //subviews layout ---
-    
+    UIView *lastV = nil;
     [self.contentView addSubview:self.imgBtn];
     [self.contentView addSubview:nameV];
     [self.contentView addSubview:inPriceV];
@@ -161,6 +203,14 @@
         make.leading.trailing.height.equalTo(inPriceV);
         make.top.equalTo(inPriceV.mas_bottom);
     }];
+    
+    
+    
+    lastV = nameV;
+    [lastV mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(@0);
+    }];
+    
 }
 
 
