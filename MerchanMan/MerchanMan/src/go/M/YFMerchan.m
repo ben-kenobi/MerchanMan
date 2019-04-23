@@ -56,8 +56,8 @@
 }
 
 -(NSURL *)defIconUrl{
-    if(self.iconPaths.count<=0) return nil;
-    return iFURL([self.iconPaths.firstObject strByAppendToDocPath]);
+    if(self.iconIDs.count<=0) return nil;
+    return iFURL([YFMerchanUtil fullImgPathByID:self.iconIDs.firstObject]);
 }
 -(UIImage *)defIcon{
     return img(@"defimgicon");

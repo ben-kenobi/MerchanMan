@@ -14,6 +14,7 @@
 #import "BCCustTextView.h"
 #import "BCCountTextView.h"
 #import "YFMerchan.h"
+#import "YFMerchanList.h"
 
 static CGFloat imgW = 900;
 static CGFloat imgCompressionFactor = .7;
@@ -63,7 +64,20 @@ static CGFloat imgCompressionFactor = .7;
     }else{
         //add
         YFMerchan *mod = [[YFMerchan alloc]init];
-        mod.
+        UIImage *img = [self.imgBtn imageForState:0];
+        if(img)
+            mod.iconIDs = @[iFormatStr(@"%@_0",mod.ID)];
+        mod.name = self.nametf.text;
+        mod.remark = self.countTv.textView.text;
+        mod.inPrice = self.inPricetf.text;
+        mod.outPrice = self.outPricetf.text;
+        mod.barCode = self.codeLab.text;
+        if([YFMerchanList.shared saveMerchant:mod img:img]){
+            [UIViewController popVC];
+        }else{
+            [iPop toastWarn:@"保存失败"];
+        }
+        
     }
 }
 

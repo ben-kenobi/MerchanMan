@@ -34,6 +34,12 @@
     [self initUI];
     self.vm = YFMerchanList.shared;
 }
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.vm = self.vm;
+}
+
 -(void)dealloc{
     [iNotiCenter removeObserver:self];
 }

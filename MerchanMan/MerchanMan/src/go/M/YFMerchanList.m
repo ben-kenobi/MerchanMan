@@ -29,26 +29,37 @@
     return self.merchans[idxpath.row];
 }
 -(void)save{
+    [iNotiCenter postNotificationName:kMerchanDataChangeNoti object:0];
     [self archive];
 }
--(void)saveMerchant:(YFMerchan *)mod{
+-(BOOL)saveMerchant:(YFMerchan *)mod img:(UIImage *)img{
     if([self.merchans containsObject:mod]){
         mod.updateTime = [NSDate date];
         [self.merchans replaceObjectAtIndex:[self.merchans indexOfObject:mod] withObject:mod];
         [self save];
     }else{
-        [self add:mod];
+        BOOL saveImgSuc = YES;
+        if(img){
+            saveImgSuc = [YFMerchanUtil saveImg:img ID:mod.iconIDs.firstObject];
+        }
+        if(saveImgSuc){
+            [self add:mod];
+        }else{
+            return NO;
+        }
     }
-
+    return YES;
 }
--(void)add:(YFMerchan *)mod{
+-(BOOL)add:(YFMerchan *)mod{
     [self.merchans insertObject:mod atIndex:0];
     [self save];
+    return YES;
 }
--(void)rm:(YFMerchan *)mod{
+-(BOOL)rm:(YFMerchan *)mod{
     [self.merchans removeObject:mod];
-    [YFMerchanUtil rmImgs:mod.iconPaths];
+    [YFMerchanUtil rmImgs:mod.iconIDs];
     [self save];
+    return YES;
 }
 -(void)rmAt:(NSIndexPath *)indexpath{
     [self.merchans removeObject:[self getBy:indexpath]];
@@ -85,7 +96,7 @@
         mod.inPrice = @"120";
         mod.outPrice = @"240";
         mod.remark = @"remat\nwlkekrlwekrlwrentma";
-        mod.iconPaths = @[iRes(@"personal_bg@2x.png")];
+        mod.iconIDs = @[iRes(@"personal_bg@2x.png")];
         mod.barCode = @"123H123";
         [instance.merchans addObject:mod];
         [instance.merchans addObject:mod];[instance.merchans addObject:mod];

@@ -10,3 +10,4 @@
 
 #import "YFMerchanConst.h"
 
+NSString *const kMerchanDataChangeNoti = @"kMerchanDataChangeNoti";

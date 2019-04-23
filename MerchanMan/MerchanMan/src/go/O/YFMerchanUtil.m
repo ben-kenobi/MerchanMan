@@ -14,9 +14,11 @@
 @implementation YFMerchanUtil
 
 +(NSString *)fullImgPathByID:(NSString *)ID{
+    if(emptyStr(ID)) return @"";
     return [iFormatStr(@"imgsDir/%@",ID) strByAppendToDocPath];
 }
 +(BOOL)saveImg:(UIImage *)img ID:(NSString *)ID{
+    if(emptyStr(ID) || !img) return NO;
     NSString *dir = [@"imgsDir/" strByAppendToDocPath];
     BOOL  exist = [iFm fileExistsAtPath:dir];
     if(!exist){

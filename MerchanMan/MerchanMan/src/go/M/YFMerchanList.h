@@ -16,8 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 +(instancetype)shared;
 
 -(void)save;
--(void)saveMerchant:(YFMerchan *)mod;
--(void)rm:(YFMerchan *)mod;
+-(BOOL)saveMerchant:(YFMerchan *)mod img:(UIImage *)img;
+-(BOOL)rm:(YFMerchan *)mod;
 -(NSArray<YFMerchan *> *)queryBy:(NSString *)likeName;
 -(NSArray<YFMerchan *> *)queryByCode:(NSString *)barCode;
 -(NSArray<YFMerchan *> *)allDatas;
