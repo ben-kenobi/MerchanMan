@@ -16,9 +16,10 @@
     if(!emptyStr(self.inPrice)){
         [mastr appendAttributedString:[[NSAttributedString alloc]initWithString:@"进价：" attributes:@{NSForegroundColorAttributeName:iColor(0xaa, 0xaa, 0xaa, 1)}]];
         [mastr appendAttributedString:[[NSAttributedString alloc]initWithString:self.inPrice]];
-        [mastr appendAttributedString:[[NSAttributedString alloc]initWithString:@"        "]];
     }
     if(!emptyStr(self.outPrice)){
+        if(!emptyStr(self.inPrice))
+            [mastr appendAttributedString: [[NSAttributedString alloc]initWithString:@"\n" attributes:@{NSFontAttributeName:iFont(6)}]];
         [mastr appendAttributedString:[[NSAttributedString alloc]initWithString:@"出价：" attributes:@{NSForegroundColorAttributeName:iColor(0xaa, 0xaa, 0xaa, 1)}]];
         [mastr appendAttributedString:[[NSAttributedString alloc]initWithString:self.outPrice]];
     }
@@ -57,12 +58,24 @@
 
 -(NSURL *)defIconUrl{
     if(self.iconIDs.count<=0) return nil;
-    return iFURL([YFMerchanUtil fullImgPathByID:self.iconIDs.firstObject]);
+    NSURL *url = iFURL([YFMerchanUtil fullImgPathByID:self.iconIDs.firstObject]);
+    return url;
 }
 -(UIImage *)defIcon{
     return img(@"defimgicon");
 }
 
+-(void)cloneFrom:(YFMerchan *)mod{
+    self.ID = mod.ID;
+    self.iconIDs = mod.iconIDs;
+    self.name = mod.name;
+    self.remark = mod.remark;
+    self.inPrice = mod.inPrice;
+    self.outPrice = mod.outPrice;
+    self.barCode = mod.barCode;
+    self.updateTime = mod.updateTime;
+    self.addTime = mod.addTime;
+}
 
 -(instancetype)init{
     if(self = [super init]){

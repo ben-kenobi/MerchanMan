@@ -15,13 +15,17 @@
 #import "BCCountTextView.h"
 #import "YFMerchan.h"
 #import "YFMerchanList.h"
+#import "UIButton+WebCache.h"
+
 
 static CGFloat imgW = 900;
-static CGFloat imgCompressionFactor = .7;
 
 
 
 @interface YFMerchanEditVC ()<UIScrollViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+{
+    BOOL _imgChanged;
+}
 @property (nonatomic,strong)UIButton *imgBtn;
 @property (nonatomic,strong)BCCustTf *nametf;
 @property (nonatomic,strong)BCCustTf *inPricetf;
@@ -48,8 +52,12 @@ static CGFloat imgCompressionFactor = .7;
 #pragma mark - datas
 -(void)updateUI{
     if(self.mod){
-    //    self.nametf.text = self.match.title;
-    //    self.countTv.textView.text=self.match.remark;
+        self.nametf.text = self.mod.name;
+        self.countTv.textView.text=self.mod.remark;
+        self.codeLab.text = self.mod.barCode;
+        self.inPricetf.text = self.mod.inPrice;
+        self.outPricetf.text = self.mod.outPrice;
+        [self.imgBtn sd_setImageWithURL:self.mod.defIconUrl forState:0 placeholderImage:0 options:(SDWebImageRefreshCached)];
     }
 }
 -(void)checkData{
@@ -60,13 +68,26 @@ static CGFloat imgCompressionFactor = .7;
 -(void)save:(id)sender{
     [self.view endEditing:YES];
     if(self.mod){
-        //update
+        UIImage *img = nil;
+        if(_imgChanged)
+            img = [self.imgBtn imageForState:0];
+        YFMerchan *mod = self.mod.copy;
+        mod.name = self.nametf.text;
+        mod.remark = self.countTv.textView.text;
+        mod.inPrice = self.inPricetf.text;
+        mod.outPrice = self.outPricetf.text;
+        mod.barCode = self.codeLab.text;
+        
+        if([YFMerchanList.shared saveMerchant:mod img:img]){
+            [self.mod cloneFrom:mod];
+            [UIViewController popVC];
+        }else{
+            [iPop toastWarn:@"保存失败"];
+        }
     }else{
         //add
         YFMerchan *mod = [[YFMerchan alloc]init];
         UIImage *img = [self.imgBtn imageForState:0];
-        if(img)
-            mod.iconIDs = @[iFormatStr(@"%@_0",mod.ID)];
         mod.name = self.nametf.text;
         mod.remark = self.countTv.textView.text;
         mod.inPrice = self.inPricetf.text;
@@ -120,6 +141,7 @@ static CGFloat imgCompressionFactor = .7;
     UIImage * img=info[UIImagePickerControllerEditedImage];
     img = [img scale2PreciseW:imgW];
     [self.imgBtn setImage:img forState:0];
+    _imgChanged = YES;
   
 }
 

@@ -26,7 +26,7 @@
     if(!transformer){
         transformer = [SDImageResizingTransformer transformerWithSize:CGSizeMake(128, 128) scaleMode:SDImageScaleModeFill];
     }
-    [self.imageView sd_setImageWithURL:self.mod.defIconUrl placeholderImage:self.mod.defIcon options:0 context:@{SDWebImageContextImageTransformer: transformer}];
+    [self.imageView sd_setImageWithURL:self.mod.defIconUrl placeholderImage:self.mod.defIcon options:SDWebImageRefreshCached context:@{SDWebImageContextImageTransformer: transformer}];
     
 
     

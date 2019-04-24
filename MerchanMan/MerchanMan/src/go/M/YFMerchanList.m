@@ -35,11 +35,21 @@
 -(BOOL)saveMerchant:(YFMerchan *)mod img:(UIImage *)img{
     if([self.merchans containsObject:mod]){
         mod.updateTime = [NSDate date];
-        [self.merchans replaceObjectAtIndex:[self.merchans indexOfObject:mod] withObject:mod];
-        [self save];
+        BOOL saveImgSuc = YES;
+        if(img){
+            mod.iconIDs = @[iFormatStr(@"%@_0",mod.ID)];
+            saveImgSuc = [YFMerchanUtil saveImg:img ID:mod.iconIDs.firstObject];
+        }
+        if(saveImgSuc){
+            [self.merchans replaceObjectAtIndex:[self.merchans indexOfObject:mod] withObject:mod];
+            [self save];
+        }else{
+            return NO;
+        }
     }else{
         BOOL saveImgSuc = YES;
         if(img){
+            mod.iconIDs = @[iFormatStr(@"%@_0",mod.ID)];
             saveImgSuc = [YFMerchanUtil saveImg:img ID:mod.iconIDs.firstObject];
         }
         if(saveImgSuc){
@@ -91,18 +101,18 @@
     dispatch_once(&onceToken, ^{
         instance = [YFMerchanList unArchive];
 #if DEBUG
-        YFMerchan *mod = [[YFMerchan alloc]init];
-        mod.name = @"121312313f";
-        mod.inPrice = @"120";
-        mod.outPrice = @"240";
-        mod.remark = @"remat\nwlkekrlwekrlwrentma";
-        mod.iconIDs = @[iRes(@"personal_bg@2x.png")];
-        mod.barCode = @"123H123";
-        [instance.merchans addObject:mod];
-        [instance.merchans addObject:mod];[instance.merchans addObject:mod];
-        [instance.merchans addObject:mod];
-        [instance.merchans addObject:mod];
-        [instance.merchans addObject:mod];
+//        YFMerchan *mod = [[YFMerchan alloc]init];
+//        mod.name = @"121312313f";
+//        mod.inPrice = @"120";
+//        mod.outPrice = @"240";
+//        mod.remark = @"remat\nwlkekrlwekrlwrentma";
+//        mod.iconIDs = @[iRes(@"personal_bg@2x.png")];
+//        mod.barCode = @"123H123";
+//        [instance.merchans addObject:mod];
+//        [instance.merchans addObject:mod];[instance.merchans addObject:mod];
+//        [instance.merchans addObject:mod];
+//        [instance.merchans addObject:mod];
+//        [instance.merchans addObject:mod];
         
 #endif
     });

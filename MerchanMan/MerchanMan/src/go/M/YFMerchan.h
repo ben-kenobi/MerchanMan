@@ -21,6 +21,8 @@
 @property (nonatomic,strong)NSDate *addTime;
 @property (nonatomic,strong)NSDate *updateTime;
 
+-(void)cloneFrom:(YFMerchan *)mod;
+
 -(NSAttributedString *)detailAttrDesc;
 -(NSAttributedString *)fullAttrDesc;
 -(NSURL *)defIconUrl;

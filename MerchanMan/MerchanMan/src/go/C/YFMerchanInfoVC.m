@@ -16,6 +16,7 @@
 #import "UIImageView+WebCache.h"
 #import "UIButton+WebCache.h"
 #import "KSPhotoBrowser.h"
+#import "YFMerchanEditVC.h"
 
 @interface YFMerchanInfoVC ()
 @property (nonatomic,strong)UIButton *iconBtn;
@@ -27,17 +28,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initUI];
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     [self updateUI];
 }
 #pragma mark - datas
 -(void)updateUI{
-    [self.iconBtn sd_setImageWithURL:self.mod.defIconUrl forState:0];
+    [self.iconBtn sd_setImageWithURL:self.mod.defIconUrl forState:0 placeholderImage:0 options:(SDWebImageRefreshCached)];
     self.lab.attributedText = self.mod.fullAttrDesc;
 }
 
 #pragma mark - actions
 -(void)onEdit{
-    
+    YFMerchanEditVC *vc = [[YFMerchanEditVC alloc]init];
+    vc.mod = self.mod;
+    [UIViewController pushVC:vc];
 }
 
 -(void)iconClick{

@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 +(NSString *)fullImgPathByID:(NSString *)ID;
 +(BOOL)saveImg:(UIImage *)img ID:(NSString *)ID;
 +(BOOL)rmImgs:(NSArray<NSString *> *)IDS;
-
++(NSString *)appendToDocPath:(NSString *)subpath;
 
 
 

@@ -10,22 +10,28 @@
 #import "YFMerchanUtil.h"
 #import "BCQRCodeAddVC.h"
 #import "BCPermission.h"
+static CGFloat imgCompressionFactor = .7;
 
 @implementation YFMerchanUtil
 
 +(NSString *)fullImgPathByID:(NSString *)ID{
     if(emptyStr(ID)) return @"";
-    return [iFormatStr(@"imgsDir/%@",ID) strByAppendToDocPath];
+    return [self appendToDocPath:iFormatStr(@"imgsDir/%@",ID)] ;
 }
+
++(NSString *)appendToDocPath:(NSString *)subpath{
+    return [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:subpath];
+}
+
 +(BOOL)saveImg:(UIImage *)img ID:(NSString *)ID{
     if(emptyStr(ID) || !img) return NO;
-    NSString *dir = [@"imgsDir/" strByAppendToDocPath];
+    NSString *dir = [self appendToDocPath:@"imgsDir/"];
     BOOL  exist = [iFm fileExistsAtPath:dir];
     if(!exist){
         [iFm createDirectoryAtPath:dir withIntermediateDirectories:YES attributes:0 error:0];
     }
-    NSString *path = iFormatStr(@"%@%@",dir,ID);
-    BOOL result = [UIImageJPEGRepresentation(img, .7) writeToFile:path atomically:YES];
+    NSString *path = iFormatStr(@"%@/%@",dir,ID);
+    BOOL result = [UIImageJPEGRepresentation(img, imgCompressionFactor) writeToFile:path atomically:YES];
     return result;
 }
 +(BOOL)rmImgs:(NSArray<NSString *> *)IDS{
@@ -34,6 +40,9 @@
     }
     return YES;
 }
+
+
+#pragma mark - goto
 
 +(void)gotoAppSetting{
     NSURL * url = iURL(UIApplicationOpenSettingsURLString);

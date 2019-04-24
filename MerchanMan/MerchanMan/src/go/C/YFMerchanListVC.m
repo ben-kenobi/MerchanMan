@@ -25,6 +25,8 @@
 
 @property (nonatomic,strong)YFMerchanSearchVC *searchVC;
 
+@property (nonatomic,strong)UIView *emptyView;
+
 @end
 
 @implementation YFMerchanListVC
@@ -69,6 +71,7 @@
 -(void)setVm:(YFMerchanList *)vm{
     _vm = vm;
     self.tv.datas = vm.allDatas;
+    [self handleEmptView];
 }
 -(void)onAdd{
     YFMerchanEditVC *vc = [[YFMerchanEditVC alloc]init];
@@ -80,7 +83,20 @@
         [self onScanResult:result];
     }];
 }
-
+-(void)handleEmptView{
+    [self.emptyView removeFromSuperview];
+    if(self.vm.allDatas.count == 0){
+        UIButton *btn = [IProUtil commonTextBtn:iFont(18) color:iGlobalFocusColor title:@"点 击 添 加"];
+        [UIUtil commonStrokeBtn:btn tar:self action:@selector(onAdd)];
+        [self.tv addSubview:btn];
+        self.emptyView = btn;
+        [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.center.equalTo(@0);
+            make.width.equalTo(self.tv).multipliedBy(.7);
+            make.height.equalTo(@52);
+        }];
+    }
+}
 
 
 #pragma mark - UI
