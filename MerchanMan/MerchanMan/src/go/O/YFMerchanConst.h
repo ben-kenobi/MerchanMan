@@ -10,3 +10,7 @@
 
 extern NSString *const kMerchanDataChangeNoti;
 
+extern NSString *const kMerchanAddNoti;
+
+extern NSString *const kMerchanScanNoti;
+

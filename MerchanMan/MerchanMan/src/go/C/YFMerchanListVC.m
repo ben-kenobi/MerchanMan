@@ -35,6 +35,9 @@
     [super viewDidLoad];
     [self initUI];
     self.vm = YFMerchanList.shared;
+    [iNotiCenter addObserver:self selector:@selector(onShorcutNoti:) name:kMerchanAddNoti object:0];
+    [iNotiCenter addObserver:self selector:@selector(onShorcutNoti:) name:kMerchanScanNoti object:0];
+
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -51,6 +54,15 @@
     YFMerchanResultListVC *vc = [[YFMerchanResultListVC alloc]init];
     vc.datas = datas;
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+-(void)onShorcutNoti:(NSNotification *)noti{
+    if(UIViewController.curVC != self) return;
+    if([noti.name isEqualToString: kMerchanAddNoti]){
+        [self onAdd];
+    }else if([noti.name isEqualToString:kMerchanScanNoti]){
+        [self onScan];
+    }
 }
 
 

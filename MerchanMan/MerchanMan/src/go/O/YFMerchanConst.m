@@ -11,3 +11,7 @@
 #import "YFMerchanConst.h"
 
 NSString *const kMerchanDataChangeNoti = @"kMerchanDataChangeNoti";
+
+NSString *const kMerchanAddNoti = @"kMerchanAddNoti";
+
+NSString *const kMerchanScanNoti = @"kMerchanScanNoti";

@@ -109,8 +109,8 @@
 		A57D4948226CA72D004392C5 /* YFMerchanSearchVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFMerchanSearchVC.m; sourceTree = "<group>"; };
 		A57D494D226CB65A004392C5 /* YFMerchanListTv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFMerchanListTv.h; sourceTree = "<group>"; };
 		A57D494E226CB65A004392C5 /* YFMerchanListTv.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFMerchanListTv.m; sourceTree = "<group>"; };
-		A57D49542270B832004392C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/Info.plist; sourceTree = "<group>"; };
 		A57D49562270B85D004392C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A57D49592271FAC0004392C5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B859992E226DAA1900547061 /* YFMerchanResultListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFMerchanResultListVC.h; sourceTree = "<group>"; };
 		B859992F226DAA1900547061 /* YFMerchanResultListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFMerchanResultListVC.m; sourceTree = "<group>"; };
 		B8599931226DAE8D00547061 /* YFMerchanInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFMerchanInfoVC.h; sourceTree = "<group>"; };
@@ -225,9 +225,9 @@
 				A57D48EA226A1559004392C5 /* Main.storyboard */,
 				A57D48EC226A1559004392C5 /* main.m */,
 				A57D48ED226A1559004392C5 /* AppDelegate.m */,
-				A57D49532270B80D004392C5 /* Info.plist */,
 				A57D48EF226A1559004392C5 /* mystring.strings */,
 				A57D49572270B85D004392C5 /* InfoPlist.strings */,
+				A57D49592271FAC0004392C5 /* Info.plist */,
 			);
 			path = info;
 			sourceTree = "<group>";
@@ -575,14 +575,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		A57D49532270B80D004392C5 /* Info.plist */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A57D49542270B832004392C5 /* en */,
-			);
-			name = Info.plist;
-			sourceTree = "<group>";
-		};
 		A57D49572270B85D004392C5 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -722,7 +714,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yf.MerchanMan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -742,7 +734,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yf.MerchanMan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

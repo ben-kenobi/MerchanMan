@@ -22,6 +22,22 @@
 }
 
 
+#pragma mark - 3dtouch
+-(void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler{
+    BOOL handled = NO;
+    if(shortcutItem){
+        if([shortcutItem.type isEqualToString:@"add"]){
+            handled = YES;
+            [iNotiCenter postNotificationName:kMerchanAddNoti object:0];
+        }else if([shortcutItem.type isEqualToString:@"scan"]){
+            handled = YES;
+            [iNotiCenter postNotificationName:kMerchanScanNoti object:0];
+        }
+    }
+    if(completionHandler)
+        completionHandler(handled);
+}
+
 
 #pragma mark - setupRootVC
 -(void)setRootVC{
