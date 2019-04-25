@@ -13,11 +13,11 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Gh_pagetest
+title: MerchanMan
 description: a test site for learning jekyll
 
-url: https://github.com/ben-kenobi/gh_pagetest
-baseurl: "/gh_pagetest"
+url: https://github.com/ben-kenobi/MerchanMan
+baseurl: "/MerchanMan"
 #baseurl: ""
 
 paginate_path: "blog/page:num/"
@@ -31,7 +31,7 @@ paginate: 5
 plugins_dir:
   - jekyll-feed
 
-gitrepo: gh_pagetest
+gitrepo: MerchanMan
 
 social:
  github: ben-kenobi
