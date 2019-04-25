@@ -70,4 +70,3 @@ defaults:
       layout: "default"
       excerpt_separator: <!--more-->
 
-theme: jekyll-theme-cayman
