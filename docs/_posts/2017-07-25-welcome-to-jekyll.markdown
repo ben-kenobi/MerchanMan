@@ -1,47 +1,20 @@
----
-layout: post
-title:  "Welcome to Jekyll!"
-date:   2017-07-25 14:25:46 +0800
-categories: jekyll update
----
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+### 本软件尊重并保护所有使用服务用户的个人隐私权。为了给您提供更准确、更有个性化的服务，本软件会按照本隐私权政策的规定使用和披露您的个人信息。但本软件将以高度的勤勉、审慎义务对待这些信息。除本隐私权政策另有规定外，在未征得您事先许可的情况下，本软件不会将这些信息对外披露或向第三方提供。本软件会不时更新本隐私权政策。您在同意本软件服务使用协议之时，即视为您已经同意本隐私权政策全部内容。本隐私权政策属于本软件服务使用协议不可分割的一部分。
+## 适用范围
+1. 在您使用本软件网络服务，本软件自动接收并记录的您的手机上的信息，包括但不限于您的健康数据、使用的语言、访问日期和时间、软硬件特征信息及您需求的网页记录等数据；
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-<!--more-->
+## 信息的使用
+1. 在获得您的数据之后，本软件可能会将其上传至服务器，以生成您的排行榜数据，以便您能够更好地使用服务
 
+## 信息披露
+1. 本软件不会将您的信息披露给不受信任的第三方。
+2. 根据法律的有关规定，或者行政或司法机构的要求，向第三方或者行政、司法机构披露；
+3. 如您出现违反中国有关法律、法规或者相关规则的情况，需要向第三方披露；
 
-{% for org_hash in site.data.orgs %}
-{% assign org = org_hash[1] %}
-{{org_hash|size}}
-[{{ org.name }} {{ org.username }}](https://github.com/{{ org.username }})
-({{ org.members | size }} members)
-{% endfor %}
+## 信息存储和交换
+1. 本软件收集的有关您的信息和资料将保存在本软件及（或）其关联公司的服务器上，这些信息和资料可能传送至您所在国家、地区或本软件收集信息和资料所在地的境外并在境外被访问、存储和展示。
 
+## 信息安全
+1. 在使用本软件网络服务进行网上交易时，您不可避免的要向交易对方或潜在的交易对方披露自己的个人信息，如联络方式或者邮政地址。请您妥善保护自己的个人信息，仅在必要的情形下向他人提供。如您发现自己的个人信息泄密，请您立即联络本软件客服，以便本软件采取相应措施。
 
 
-{% highlight ruby linenos %}
-def show
-@widget = Widget(params[:id])
-respond_to do |format|
-format.html # show.html.erb
-format.json { render json: @widget }
-end
-end
-{% endhighlight  %}
-
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby linenos %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
 
