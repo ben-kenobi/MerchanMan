@@ -7,6 +7,7 @@
 #import "YFCate.h"
 
 @interface AppDelegate ()
+
 @end
 
 @implementation AppDelegate
@@ -24,18 +25,22 @@
 
 #pragma mark - 3dtouch
 -(void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler{
-    BOOL handled = NO;
-    if(shortcutItem){
-        if([shortcutItem.type isEqualToString:@"add"]){
-            handled = YES;
-            [iNotiCenter postNotificationName:kMerchanAddNoti object:0];
-        }else if([shortcutItem.type isEqualToString:@"scan"]){
-            handled = YES;
-            [iNotiCenter postNotificationName:kMerchanScanNoti object:0];
+    CGFloat delay = 0;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        BOOL handled = NO;
+        if(shortcutItem){
+            if([shortcutItem.type isEqualToString:@"add"]){
+                handled = YES;
+                [iNotiCenter postNotificationName:kMerchanAddNoti object:0];
+            }else if([shortcutItem.type isEqualToString:@"scan"]){
+                handled = YES;
+                [iNotiCenter postNotificationName:kMerchanScanNoti object:0];
+            }
         }
-    }
-    if(completionHandler)
-        completionHandler(handled);
+        if(completionHandler)
+            completionHandler(handled);
+    });
+    
 }
 
 
