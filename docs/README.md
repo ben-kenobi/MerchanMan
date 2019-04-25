@@ -4,9 +4,6 @@ We are an item Manage App
 <p align="center" >
     <img src="./assets/img/merchanMan.png">
 </p>
-<p align="center" >
-    <img src=url('./assets/img/merchanMan.png')>
-</p>
 
 ### Support or Contact
 
