@@ -114,7 +114,7 @@
 #pragma mark - UI
 -(void)initUI{
     self.title = @"商品列表";
-//    self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc] initWithImage:img(@"sensitivity_icon") style:(UIBarButtonItemStylePlain) target:self action:@selector(onMenuClicked)];
+    self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc] initWithImage:img(@"sensitivity_icon") style:(UIBarButtonItemStylePlain) target:self action:@selector(onMenuClicked)];
     UIBarButtonItem *additem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:(UIBarButtonSystemItemAdd) target:self action:@selector(onAdd)];
     UIBarButtonItem *scanitem = [[UIBarButtonItem alloc]initWithImage:[img(@"scanicon") renderWithColor:iColor(0x44, 0x44, 0x44, 1)] style:UIBarButtonItemStylePlain target:self action:@selector(onScan)];
     self.navigationItem.rightBarButtonItems = @[additem,scanitem];

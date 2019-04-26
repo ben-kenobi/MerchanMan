@@ -39,6 +39,10 @@
 		A57D4949226CA72D004392C5 /* YFMerchanSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A57D4948226CA72D004392C5 /* YFMerchanSearchVC.m */; };
 		A57D494F226CB65A004392C5 /* YFMerchanListTv.m in Sources */ = {isa = PBXBuildFile; fileRef = A57D494E226CB65A004392C5 /* YFMerchanListTv.m */; };
 		A57D49552270B85D004392C5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A57D49572270B85D004392C5 /* InfoPlist.strings */; };
+		B82FF82422729F44006FB6B5 /* YFAboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B82FF82322729F44006FB6B5 /* YFAboutVC.m */; };
+		B82FF8272272A261006FB6B5 /* YFDisclaimerV.m in Sources */ = {isa = PBXBuildFile; fileRef = B82FF8252272A260006FB6B5 /* YFDisclaimerV.m */; };
+		B82FF82A2272A3FE006FB6B5 /* YFBaseWebviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B82FF8292272A3FE006FB6B5 /* YFBaseWebviewVC.m */; };
+		B82FF82D2272A4A2006FB6B5 /* YFPrivacyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B82FF82C2272A4A2006FB6B5 /* YFPrivacyVC.m */; };
 		B8599930226DAA1900547061 /* YFMerchanResultListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B859992F226DAA1900547061 /* YFMerchanResultListVC.m */; };
 		B8599933226DAE8D00547061 /* YFMerchanInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B8599932226DAE8D00547061 /* YFMerchanInfoVC.m */; };
 		B8599938226DB2FD00547061 /* BCCountTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8599935226DB2FD00547061 /* BCCountTextView.m */; };
@@ -111,6 +115,14 @@
 		A57D494E226CB65A004392C5 /* YFMerchanListTv.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFMerchanListTv.m; sourceTree = "<group>"; };
 		A57D49562270B85D004392C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A57D49592271FAC0004392C5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B82FF82222729F44006FB6B5 /* YFAboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFAboutVC.h; sourceTree = "<group>"; };
+		B82FF82322729F44006FB6B5 /* YFAboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFAboutVC.m; sourceTree = "<group>"; };
+		B82FF8252272A260006FB6B5 /* YFDisclaimerV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFDisclaimerV.m; sourceTree = "<group>"; };
+		B82FF8262272A260006FB6B5 /* YFDisclaimerV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFDisclaimerV.h; sourceTree = "<group>"; };
+		B82FF8282272A3FE006FB6B5 /* YFBaseWebviewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFBaseWebviewVC.h; sourceTree = "<group>"; };
+		B82FF8292272A3FE006FB6B5 /* YFBaseWebviewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFBaseWebviewVC.m; sourceTree = "<group>"; };
+		B82FF82B2272A4A2006FB6B5 /* YFPrivacyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFPrivacyVC.h; sourceTree = "<group>"; };
+		B82FF82C2272A4A2006FB6B5 /* YFPrivacyVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFPrivacyVC.m; sourceTree = "<group>"; };
 		B859992E226DAA1900547061 /* YFMerchanResultListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFMerchanResultListVC.h; sourceTree = "<group>"; };
 		B859992F226DAA1900547061 /* YFMerchanResultListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFMerchanResultListVC.m; sourceTree = "<group>"; };
 		B8599931226DAE8D00547061 /* YFMerchanInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFMerchanInfoVC.h; sourceTree = "<group>"; };
@@ -280,6 +292,12 @@
 				B8599932226DAE8D00547061 /* YFMerchanInfoVC.m */,
 				B859993D226DBF5C00547061 /* YFMerchanEditVC.h */,
 				B859993E226DBF5C00547061 /* YFMerchanEditVC.m */,
+				B82FF82222729F44006FB6B5 /* YFAboutVC.h */,
+				B82FF82322729F44006FB6B5 /* YFAboutVC.m */,
+				B82FF8282272A3FE006FB6B5 /* YFBaseWebviewVC.h */,
+				B82FF8292272A3FE006FB6B5 /* YFBaseWebviewVC.m */,
+				B82FF82B2272A4A2006FB6B5 /* YFPrivacyVC.h */,
+				B82FF82C2272A4A2006FB6B5 /* YFPrivacyVC.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -301,6 +319,8 @@
 				A57D494E226CB65A004392C5 /* YFMerchanListTv.m */,
 				B8C2AC24226D9719009F1116 /* BCTopIconBtn.h */,
 				B8C2AC23226D9719009F1116 /* BCTopIconBtn.m */,
+				B82FF8262272A260006FB6B5 /* YFDisclaimerV.h */,
+				B82FF8252272A260006FB6B5 /* YFDisclaimerV.m */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -524,15 +544,19 @@
 				B8599930226DAA1900547061 /* YFMerchanResultListVC.m in Sources */,
 				B859993C226DB49C00547061 /* BCImgAttach.m in Sources */,
 				A57D4935226A1559004392C5 /* YFBasicVC.m in Sources */,
+				B82FF82A2272A3FE006FB6B5 /* YFBaseWebviewVC.m in Sources */,
 				B8C2AC2F226D9DBD009F1116 /* YFMerchanConst.m in Sources */,
+				B82FF82422729F44006FB6B5 /* YFAboutVC.m in Sources */,
 				B8C2AC28226D974D009F1116 /* BCManualEnterSNVC.m in Sources */,
 				A57D4931226A1559004392C5 /* BCLeftMenuVC.m in Sources */,
+				B82FF82D2272A4A2006FB6B5 /* YFPrivacyVC.m in Sources */,
 				A57D493E226B3FA4004392C5 /* YFMerchanList.m in Sources */,
 				A57D492B226A1559004392C5 /* YFMerchanListVC.m in Sources */,
 				B8C2AC25226D9719009F1116 /* BCTopIconBtn.m in Sources */,
 				A57D493B226B3F97004392C5 /* YFMerchan.m in Sources */,
 				B8C2AC22226D9698009F1116 /* BCQRCodeAddVC.m in Sources */,
 				B8A6CE09226EBF770087BBA3 /* BCPermission.m in Sources */,
+				B82FF8272272A261006FB6B5 /* YFDisclaimerV.m in Sources */,
 				A57D4938226A1559004392C5 /* BCMenuCell.m in Sources */,
 				A57D4937226A1559004392C5 /* BCCoverView.m in Sources */,
 				B8599939226DB2FD00547061 /* BCCustTextView.m in Sources */,
@@ -714,7 +738,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yf.MerchanMan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -734,7 +758,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yf.MerchanMan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

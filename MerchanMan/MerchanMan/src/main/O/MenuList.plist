@@ -4,21 +4,11 @@
 <array>
 	<dict>
 		<key>iconname</key>
-		<string>setting_icon</string>
-		<key>title</key>
-		<string>Settings</string>
-		<key>vcName</key>
-		<string>BCUserSettingVC</string>
-		<key>hasNews</key>
-		<false/>
-	</dict>
-	<dict>
-		<key>iconname</key>
 		<string>about_icon</string>
 		<key>title</key>
 		<string>About</string>
 		<key>vcName</key>
-		<string>BCAboutVC</string>
+		<string>YFAboutVC</string>
 		<key>hasNews</key>
 		<false/>
 	</dict>

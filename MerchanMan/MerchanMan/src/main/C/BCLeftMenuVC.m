@@ -11,6 +11,7 @@
 #import "BCMenuCell.h"
 #import "BCMenuList.h"
 #import "YFMainVC2.h"
+#import "YFAboutVC.h"
 
 
 static NSString *celliden = @"celliden";
@@ -64,15 +65,21 @@ static NSString *celliden = @"celliden";
 
 -(void)initUI{
     self.view.backgroundColor=iColor(0xFB, 0xFB, 0xFB, 1);
-    UIImage *img = img(@"personal_bg");
+    
+    
+#if(0)
+//    UIImage *img = img(@"");
     BCUserInfoCell *cell = [[BCUserInfoCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@""];
     
-    cell.frame=CGRectMake(0, 0, self.preferredContentSize.width, self.preferredContentSize.width*(img.h/img.w));
+    cell.frame=CGRectMake(0, 0, self.preferredContentSize.width, 160);
     
     self.userInfoCell=cell;
     self.userInfoCell.cb = ^{
     };
     [cell updateUserInfo];
+    
+    [self.view addSubview:cell];
+
     
     self.tv = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     self.tv.bounces=YES;
@@ -87,14 +94,23 @@ static NSString *celliden = @"celliden";
     
 
     // layout ------
-    [self.view addSubview:cell];
     [self.view addSubview:self.tv];
     [self.tv mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.bottom.equalTo(@0);
         make.top.equalTo(cell.mas_bottom).offset(dp2po(20));
         make.width.equalTo(self.view.mas_width).multipliedBy(1);
     }];
-
+#else
+    YFAboutVC *vc = [[YFAboutVC alloc]init];
+    vc.ignoreAddToCurVC = YES;
+    [self addChildViewController:vc];
+    [self.view addSubview:vc.view];
+    [vc.view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.bottom.equalTo(@0);
+        make.top.equalTo(@0);
+        make.width.equalTo(self.view.mas_width).multipliedBy(1);
+    }];
+#endif
 }
 
 @end

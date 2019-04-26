@@ -22,9 +22,9 @@
 
 #pragma mark - Event
 -(void)updateUserInfo{
-    self.avatar.image=img(@"avatar_default_con");
+    self.avatar.image=img(@"icon_app");
     self.detailLab.text=@"";
-    self.titleLab.text=@"";
+    self.titleLab.text=@"商品管理";
     [self updateLayout];
 }
 
